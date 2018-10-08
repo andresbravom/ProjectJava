@@ -14,7 +14,7 @@ public class List_category {
 		boolean found = false;
 		
 		while(i <= list.size()) {
-			if (name_category == list.get(i).getName()) {
+			if (name_category == list.get(i).getName())  {
 				found = true;
 				i++;
 			}
