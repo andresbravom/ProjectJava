@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Product {
 	
 	private String name;
@@ -34,25 +36,75 @@ public class Product {
 	}
 	
 	Product(String name, int id_product, String category_name, int stock, double prize){
-		Category producto_categoria = new Category(category_name);
+		
+		System.out.println("test 1");
+		Category aux = Category.general.search_category(category_name);
+		System.out.println("test 2");
+		//esto no funciona
+		aux.products.insert_product(this);
+		System.out.println("test 3");
+
+		
+		
+		
 		this.name = name;
 		this.id_product = id_product;
 		this.stock = stock;
 		this.prize = prize;
 	}
 	
-	Product(String name, int id_product){
-		this.name = name;
-		this.id_product = id_product;
-		
-	}
-	
 	public void buy_product(User name) {
 		name.add_product(this);
 	}
 	
-	public static void main(String[] args) {
+	
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/*Scanner input = new Scanner(System.in);
+		
+		boolean exit = false;
+		int opcion;
+		
+		while(!exit) {
+			System.out.println("1. Search Product");
+			System.out.println("2. Search Categories");
+			System.out.println("3. Buy Product");
+			
+			System.out.println("1. Exit");
+		}
+		
+		
+		
+		Product a = new Product("S", 4, "W", 6, 1);
+		
+		System.out.println(a.id_product);
+		*/
 	}
 	
-}

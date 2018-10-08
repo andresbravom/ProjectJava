@@ -2,6 +2,9 @@ public class Category {
 	
 	private String name;
 	private int id_category;
+	static List_category general = new List_category();
+	List_product products; 
+	
 
 	public int getId_category() {
 		return id_category;
@@ -22,6 +25,8 @@ public class Category {
 	Category(String name, int id_category){
 		this.name = name;
 		this.id_category = id_category;
+		general.addCategory(this);
+		
 	}
 	
 	Category(String name){

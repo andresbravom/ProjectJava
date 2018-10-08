@@ -4,7 +4,7 @@ import java.util.List;
 public class List_product {
 
 	
-	List<Product> list = new ArrayList();
+	private List<Product> list = new ArrayList<Product>();
 	
 	public void insert_product(Product name) {
 		list.add(name);
@@ -14,8 +14,8 @@ public class List_product {
 		int i = 0;
 		boolean found = false;
 		
-		while(i <= list.size()) {
-			if (name_product == list.get(i).getName()) {
+		while(i < list.size()) {
+			if (name_product.equals( list.get(i).getName())) {
 				found = true;
 				break;
 			}

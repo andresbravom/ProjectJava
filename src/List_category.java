@@ -3,25 +3,26 @@ import java.util.List;
 
 public class List_category {
 	
-	List<Category> list = new ArrayList();
+	List<Category> cList = new ArrayList<Category>();
 	
 	public void addCategory (Category name) {
-		list.add(name);
+		cList.add(name);
 	}
 	
 	public Category search_category(String name_category) {
+		
 		int i = 0;
 		boolean found = false;
-		
-		while(i <= list.size()) {
-			if (name_category == list.get(i).getName())  {
+		while(i < cList.size()) {
+			
+			if (name_category.equals( cList.get(i).getName()))  {
 				found = true;
-				i++;
+				break;
 			}
-				
+			i++;	
 		}
 		if (found) {
-			return list.get(i);
+			return cList.get(i);
 		}else
 			return null;
 			

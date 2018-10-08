@@ -52,8 +52,6 @@ public class User {
 		this.id_user = id_user;	
 	}
 	
-	User(int id_user){
-		this.id_user = id_user;
-	}
+
 
 }
