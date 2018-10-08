@@ -47,4 +47,12 @@ public class Product {
 		
 	}
 	
+	public void buy_product(User name) {
+		name.add_product(this);
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+	
 }

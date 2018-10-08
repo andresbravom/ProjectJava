@@ -1,8 +1,14 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class User {
+
 	private String username;
 	private String email;
 	private String password;
 	private int id_user;
+	
+	private List <Product> buy_Products = new ArrayList <Product>();
 	
 
 	protected String getUsername() {
@@ -32,6 +38,10 @@ public class User {
 	protected void setId_user(int id_user) {
 		this.id_user = id_user;
 		
+	}
+	
+	public void add_product(Product name) {
+		buy_Products.add(name);
 	}
 	
 	
