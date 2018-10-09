@@ -36,21 +36,16 @@ public class Product {
 	}
 	
 	Product(String name, int id_product, String category_name, int stock, double prize){
-		
-		System.out.println("test 1");
-		Category aux = Category.general.search_category(category_name);
-		System.out.println("test 2");
-		//esto no funciona
-		aux.products.insert_product(this);
-		System.out.println("test 3");
-
-		
-		
-		
 		this.name = name;
 		this.id_product = id_product;
 		this.stock = stock;
 		this.prize = prize;
+		System.out.println("test 1");
+		
+		Category.general.search_category(category_name).products.insert_product(this);
+		
+		
+
 	}
 	
 	public void buy_product(User name) {

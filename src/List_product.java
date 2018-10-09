@@ -4,7 +4,7 @@ import java.util.List;
 public class List_product {
 
 	
-	private List<Product> list = new ArrayList<Product>();
+	List<Product> list = new ArrayList<Product>();
 	
 	public void insert_product(Product name) {
 		list.add(name);

@@ -3,7 +3,7 @@ public class Category {
 	private String name;
 	private int id_category;
 	static List_category general = new List_category();
-	List_product products; 
+	List_product products = new List_product(); 
 	
 
 	public int getId_category() {
