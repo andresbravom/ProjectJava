@@ -10,6 +10,12 @@ public class User {
 	
 	private List <Product> buy_Products = new ArrayList <Product>();
 	
+	
+	//Prueba de compra usuario
+	public Product get_buy_product(int number_products) {
+		return buy_Products.get(number_products);
+	}
+	
 
 	protected String getUsername() {
 		return username;

@@ -40,16 +40,23 @@ public class Product {
 		this.id_product = id_product;
 		this.stock = stock;
 		this.prize = prize;
-		System.out.println("test 1");
+
 		
 		Category.general.search_category(category_name).products.insert_product(this);
-		
-		
+	
 
 	}
 	
-	public void buy_product(User name) {
-		name.add_product(this);
+	public boolean buy_product(User name) {
+		boolean error = true;
+		
+		if(stock > 0) {
+			stock--;
+			name.add_product(this);
+			error = false;
+		}
+			
+		return error;
 	}
 	
 	
