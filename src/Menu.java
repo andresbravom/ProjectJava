@@ -20,11 +20,13 @@ public class Menu {
 		Product music2 = new Product("cd1", 05, "music", 10, 5.5);
 		Product music3 = new Product("cd1", 06, "music", 10, 5.5);
 		
-		int opcion;
+		int opcion=99;
+		while (opcion != 0) {
 		System.out.println("Elegir una opción");
-		System.out.println("\n1. Buscar producto");
-		System.out.println("2. Buscar categoria");
-		System.out.println("3. Comprar producto");
+		System.out.println("\n1. Mostrar todos los productos");
+		System.out.println("2. Mostrar todas las categorias");
+		System.out.println("3. Buscar un producto");
+		System.out.println("4. Buscar un producto por categoría");
 		System.out.println("0. Salir");
 		
 		
@@ -32,11 +34,19 @@ public class Menu {
 		opcion = n.nextInt();
 		
 	
-		while (opcion != 0) {
+		
 			
 	
 			switch(opcion) {
 			case 1:
+				
+				System.out.println("Debug");
+				for(int i=0;i<Product.general.list.size();i++) {
+					System.out.println(Product.general.list.get(i).getName());
+				}
+			break;
+				
+			case 2:
 				String nameProduct;
 				System.out.println("Introducir el nombre del producto");
 				Scanner nameP = new Scanner(System.in);
@@ -48,8 +58,19 @@ public class Menu {
 					
 				}
 				break;
+				
+				
+				
+			/*case 2:
+				String categories;
+				Category actualCategory = Category.general.search_category(categories);
+				int i = 0;
+				while(i < Category.general.cList.size()) {
+					System.out.println(Category.general.cList.get(i).getName());
+					i++;
+					}*/
 			
-			case 2:
+			/*case 2:
 				String nameCategory;
 				System.out.println("Introducir el nombre de la categoría");
 				Scanner nameC = new Scanner(System.in);
@@ -57,15 +78,15 @@ public class Menu {
 				Category actualCategory = Category.general.search_category(nameCategory);
 				
 				if(actualCategory != null){
-					int j = 0;
-					while(j < video.products.list.size()) {
+					int i = 0;
+					while(i < ) {
 						System.out.println(video.products.list.get(j).getName());
-						j++;
+						i++;
 						}
 				}
-				break;
+				break;*/
 				
-			case 3:
+			case 4:
 				String product;
 				System.out.println("Introducir el nombre del producto que desea comprar");
 				Scanner buyP = new Scanner (System.in);
