@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Product {
-	
+	static List_product general = new List_product();
 	private String name;
 	private int id_product;
 	private int stock;
@@ -10,6 +10,7 @@ public class Product {
 	protected String getName() {
 		return name;
 	}
+	
 	protected void setName(String name) {
 		this.name = name;
 	}
@@ -17,6 +18,7 @@ public class Product {
 	protected int getId() {
 		return id_product;
 	}
+	
 	protected void setId(int id) {
 		this.id_product = id;
 	}
@@ -24,6 +26,7 @@ public class Product {
 	protected int getStock() {
 		return stock;
 	}
+	
 	protected void setStock(int stock) {
 		this.stock = stock;
 	}
@@ -31,6 +34,7 @@ public class Product {
 	protected double getPrize() {
 		return prize;
 	}
+	
 	protected void setPrize(double prize) {
 		this.prize = prize;
 	}
@@ -40,11 +44,10 @@ public class Product {
 		this.id_product = id_product;
 		this.stock = stock;
 		this.prize = prize;
-
-		
-		Category.general.search_category(category_name).products.insert_product(this);
 	
-
+		Category.general.search_category(category_name).products.insert_product(this);
+		general.insert_product(this);
+	
 	}
 	
 	public boolean buy_product(User name) {
@@ -58,55 +61,5 @@ public class Product {
 			
 		return error;
 	}
-	
-	
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		/*Scanner input = new Scanner(System.in);
-		
-		boolean exit = false;
-		int opcion;
-		
-		while(!exit) {
-			System.out.println("1. Search Product");
-			System.out.println("2. Search Categories");
-			System.out.println("3. Buy Product");
-			
-			System.out.println("1. Exit");
-		}
-		
-		
-		
-		Product a = new Product("S", 4, "W", 6, 1);
-		
-		System.out.println(a.id_product);
-		*/
-	}
+}
 	

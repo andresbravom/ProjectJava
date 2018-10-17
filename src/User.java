@@ -10,16 +10,14 @@ public class User {
 	
 	private List <Product> buy_Products = new ArrayList <Product>();
 	
-	
-	//Prueba de compra usuario
 	public Product get_buy_product(int number_products) {
 		return buy_Products.get(number_products);
 	}
 	
-
 	protected String getUsername() {
 		return username;
 	}
+	
 	protected void setUsername(String username) {
 		this.username = username;
 	}
@@ -27,6 +25,7 @@ public class User {
 	protected String getEmail() {
 		return email;
 	}
+	
 	protected void setEmail(String email) {
 		this.email = email;
 	}
@@ -34,6 +33,7 @@ public class User {
 	protected String getPassword() {
 		return password;
 	}
+	
 	protected void setPassword(String password) {
 		this.password = password;
 	}
@@ -41,6 +41,7 @@ public class User {
 	protected int getId_user() {
 		return id_user;
 	}
+	
 	protected void setId_user(int id_user) {
 		this.id_user = id_user;
 		
@@ -49,15 +50,11 @@ public class User {
 	public void add_product(Product name) {
 		buy_Products.add(name);
 	}
-	
-	
+		
 	User(String username, String email, String password, int id_user){
 		this.username = username;
 		this.email = email;
 		this.password = password;
 		this.id_user = id_user;	
 	}
-	
-
-
 }

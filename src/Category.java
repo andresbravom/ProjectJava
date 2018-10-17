@@ -28,10 +28,4 @@ public class Category {
 		general.addCategory(this);
 		
 	}
-	
-	Category(String name){
-	this.name = name;
-	
-	}
-
 }
