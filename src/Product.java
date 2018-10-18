@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class Product {
 	static List_product general = new List_product();
+	
 	private String name;
 	private int id_product;
 	private int stock;

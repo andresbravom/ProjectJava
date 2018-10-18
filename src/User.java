@@ -7,8 +7,8 @@ public class User {
 	private String email;
 	private String password;
 	private int id_user;
-	
-	private List <Product> buy_Products = new ArrayList <Product>();
+	static List<User> users = new ArrayList <User>();
+	 List <Product> buy_Products = new ArrayList <Product>();
 	
 	public Product get_buy_product(int number_products) {
 		return buy_Products.get(number_products);
@@ -56,5 +56,6 @@ public class User {
 		this.email = email;
 		this.password = password;
 		this.id_user = id_user;	
+		users.add(this);
 	}
 }
