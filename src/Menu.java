@@ -40,13 +40,18 @@ public class Menu {
 			switch(opcion) {
 			case 1:
 				
-				System.out.println("Debug");
-				for(int i=0;i<Product.general.list.size();i++) {
+				for(int i=0;i < Product.general.list.size();i++) {
 					System.out.println(Product.general.list.get(i).getName());
 				}
 			break;
 				
 			case 2:
+				
+				for(int i=0; i< Category.general.list.size(); i++ ) {
+					System.out.println(Category.general.list.get(i).getName());
+				}
+
+			case 3:
 				String nameProduct;
 				System.out.println("Introducir el nombre del producto");
 				Scanner nameP = new Scanner(System.in);
@@ -54,13 +59,30 @@ public class Menu {
 				Product actualProduct = Product.general.search_product(nameProduct);
 				
 				if(actualProduct != null){
-					System.out.println(actualProduct.getName()+" precio: " + actualProduct.getPrize()+"€");
 					
+					System.out.println("\n"+ actualProduct.getName());
+					System.out.println("Precio: "+ actualProduct.getPrize()+"€");
+					System.out.println("ID del producto: "+ actualProduct.getStock());
+					System.out.println("Stock del producto: "+ actualProduct.getStock());
 				}
 				break;
 				
+			case 4:
+				String nameCategories;
+				System.out.println("Introducir el nombre de la categoria");
+				Scanner nameC = new Scanner (System.in);
+				nameCategories = nameC.nextLine();
+				Category actualCategory = Category.general.search_category(nameCategories);
 				
-				
+				if(actualCategory != null) {
+					int i = 0;
+					
+					while(i < Category.general.list.size()) {
+						System.out.println(Product.general.list.get(i).getName());
+						i++;
+					}
+				}
+				break;
 			/*case 2:
 				String categories;
 				Category actualCategory = Category.general.search_category(categories);
@@ -86,7 +108,7 @@ public class Menu {
 				}
 				break;*/
 				
-			case 4:
+			case 20:
 				String product;
 				System.out.println("Introducir el nombre del producto que desea comprar");
 				Scanner buyP = new Scanner (System.in);
