@@ -22,6 +22,7 @@ public class Menu {
 	
 	static boolean authentification(String username, String password) {
 		boolean login = false;
+		
 		for(int i = 0; i < User.users.size(); i++) {
 			if(username.equals(User.users.get(i).getUsername()) && password.equals(User.users.get(i).getPassword())) {
 				login = true;
@@ -29,7 +30,6 @@ public class Menu {
 				break;
 			}
 		}
-		
 		
 		return login;
 	}
@@ -56,18 +56,18 @@ public class Menu {
 		Product book1 = new Product("ulisses",00110, "books", 25, 30.50);
 		Product book2 = new Product("oliver twist",00111, "books", 40, 34.3);
 		Product book3 = new Product("moby dick",01000, "books", 55, 45.30);
-		Product book4 = new Product("moby dick",01001, "books", 70, 29.99);
+		Product book4 = new Product("dante",01001, "books", 70, 29.99);
 		Product book5 = new Product("sherlock holmes",01010, "books", 81, 42.45);
 		
-		Product album1 = new Product("Electric Landyland", 04, "music", 10, 5.5);
-		Product album2 = new Product("modern sounds", 05, "music", 10, 5.5);
-		Product album3 = new Product("sticky fingers", 06, "music", 10, 5.5);
-		Product album4 = new Product("born to run", 06, "music", 10, 5.5);
-		Product album5 = new Product("s", 06, "music", 10, 5.5);
+		Product album1 = new Product("Electric Landyland", 01011, "music", 50, 12.55);
+		Product album2 = new Product("modern sounds", 01100, "music", 35, 10.80);
+		Product album3 = new Product("sticky fingers", 01101, "music", 60, 15.99);
+		Product album4 = new Product("born to run", 01110, "music", 25, 10.00);
+		Product album5 = new Product("crazy", 01111, "music", 40, 13.07);
 		
 		int opcion = 99;
 		
-		System.out.println("Bienvenido");
+		System.out.println("Welcome to AndrewShop");
 
 		String username;
 		String pass;
@@ -79,115 +79,95 @@ public class Menu {
 			System.out.println("Intoduce nombre contraseña");
 			Scanner password = new Scanner(System.in);
 			pass = password.nextLine();
-		if (authentification(username,pass)) {
-			opcion = -1;
-			while (opcion != 0) {
-				System.out.println("Elegir una opción");
-				System.out.println("\n1. Mostrar todos los productos");
-				System.out.println("2. Mostrar todas las categorias");
-				System.out.println("3. Buscar un producto");
-				System.out.println("4. Buscar un producto por categoría");
-				System.out.println("5. Comprar");
-				System.out.println("6. Carrito");
-				System.out.println("0. Salir");		
+		
+			if (authentification(username,pass)) {
+				opcion = -1;
+				while (opcion != 0) {
+					System.out.println("Elegir una opción");
+					System.out.println("\n1. Mostrar todos los productos");
+					System.out.println("2. Mostrar todas las categorias");
+					System.out.println("3. Buscar un producto");
+					System.out.println("4. Buscar un producto por categoría");
+					System.out.println("5. Comprar");
+					System.out.println("6. Carrito");
+					System.out.println("0. Salir");		
 				
-				opcion = n.nextInt();
+					opcion = n.nextInt();
 				
-				switch(opcion) {
-					case 1:
-						
-						for(int i=0;i < Product.general.list.size();i++) {
-							System.out.println(Product.general.list.get(i).getName());
-						}
-					break;
-						
-					case 2:
-						
-						for(int i=0; i< Category.general.list.size(); i++ ) {
-							System.out.println(Category.general.list.get(i).getName());
-						}
-			
-					case 3:
-						String nameProduct;
-						System.out.println("Introducir el nombre del producto");
-						Scanner nameP = new Scanner(System.in);
-						nameProduct = nameP.nextLine();
-						Product actualProduct = Product.general.search_product(nameProduct);
-						
-						if(actualProduct != null){
+					switch(opcion) {
+						case 1:
 							
-							System.out.println("\n"+ actualProduct.getName());
-							System.out.println("Precio: "+ actualProduct.getPrize()+"€");
-							System.out.println("ID del producto: "+ actualProduct.getStock());
-							System.out.println("Stock del producto: "+ actualProduct.getStock());
-						}
-						break;
+							for(int i=0;i < Product.general.list.size();i++) {
+								System.out.println(Product.general.list.get(i).getName());
+							}
+							break;
+							
+						case 2:
+							
+							for(int i=0; i< Category.general.list.size(); i++ ) {
+								System.out.println(Category.general.list.get(i).getName());
+							}
+							break;
+				
+						case 3:
+							
+							String nameProduct;
+							System.out.println("Introducir el nombre del producto");
+							Scanner nameP = new Scanner(System.in);
+							nameProduct = nameP.nextLine();
+							Product actualProduct = Product.general.search_product(nameProduct);
+							
+							if(actualProduct != null){
+								
+								System.out.println("\n"+ actualProduct.getName());
+								System.out.println("Pryze: "+ actualProduct.getPrize()+"€");
+								System.out.println("ID product: "+ actualProduct.getStock());
+								System.out.println("Stock producto: "+ actualProduct.getStock());
+							}
+							break;
+							
+						case 4:
+							
+							String nameCategories;
+							System.out.println("Introducir el nombre de la categoria");
+							Scanner nameC = new Scanner (System.in);
+							nameCategories = nameC.nextLine();
+							Category actualCategory = Category.general.search_category(nameCategories);
+							
+							if(actualCategory != null) {
+								printProducts(actualCategory);
+							}
+							break;
 						
-					case 4:
-						String nameCategories;
-						System.out.println("Introducir el nombre de la categoria");
-						Scanner nameC = new Scanner (System.in);
-						nameCategories = nameC.nextLine();
-						Category actualCategory = Category.general.search_category(nameCategories);
-						if(actualCategory != null) {
-							printProducts(actualCategory);
+						case 5:
+							
+							String product;
+							System.out.println("Que producto desea comprar");
+							Scanner productB = new Scanner (System.in);
+							product = productB.nextLine();
+							Product actualProductBuy = Product.general.search_product(product);
+							
+							if(actualProductBuy != null) {
+								actualProductBuy.buy_product(actualUser);
+							}
+							break;
+							
+						case 6:
+							printproductsbuy(actualUser);
+							break;
+						default: 
+							System.out.println("Elegir una opcion correcta");
+							break;
 						}
-			
-						break;
-					case 5:
-						String product;
-						System.out.println("Que producto desea comprar");
-						Scanner productB = new Scanner (System.in);
-						product = productB.nextLine();
-						Product actualProductBuy = Product.general.search_product(product);
-						if(actualProductBuy != null) {
-							actualProductBuy.buy_product(actualUser);
-						}
-						break;
-						
-					case 6:
-						printproductsbuy(actualUser);
+							
 					}
-				}
 			
-			}else if(!username.equals("salir") || !pass.equals("salir")){
-				System.out.println("Error");
+			}else if(!username.equals("exit") || !pass.equals("exit")){
+				System.out.println("exit");
 		}
-		}while(!username.equals("salir") || !pass.equals("salir"));
-		
-		
-		
-		
-		
-		
+		}while(!username.equals("exit") || !pass.equals("exit"));
+	
 	}
 }
 			
-			
 		
-		
-		
-		
-
-
-		
-		
-		/*	
-		User test = new User("andres", "@", "qwerty", 5);
-		
-		int i = 0;
-		while(i < Category.general.cList.size()) {
-			System.out.println(Category.general.cList.get(i).getName());
-			i++;
-			}
-		
-		int j = 0;
-		while(j < video.products.list.size()) {
-			System.out.println(video.products.list.get(j).getName());
-			j++;
-			}
-		movie1.buy_product(test);
-		
-		System.out.println(test.get_buy_product(0).getName());	
-
-*/
