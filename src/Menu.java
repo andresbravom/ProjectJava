@@ -3,14 +3,13 @@ import java.util.Scanner;
 
 public class Menu {
 
-	static User actualuser;
+	static User actualUser;
 	static Scanner n = new Scanner(System.in);
 
 	static void printProducts(Category n) {
 		for(int i=0; i<n.products.list.size();i++){
 			
-			System.out.println(n.products.list.get(i).getName());
-			
+			System.out.println(n.products.list.get(i).getName());	
 		}
 		
 	}
@@ -21,12 +20,12 @@ public class Menu {
 		}
 	}
 	
-	static boolean authentification(String username, String pasword) {
+	static boolean authentification(String username, String password) {
 		boolean login = false;
 		for(int i = 0; i < User.users.size(); i++) {
-			if(username.equals(User.users.get(i).getUsername()) && pasword.equals(User.users.get(i).getPassword())) {
+			if(username.equals(User.users.get(i).getUsername()) && password.equals(User.users.get(i).getPassword())) {
 				login = true;
-				actualuser = User.users.get(i);
+				actualUser = User.users.get(i);
 				break;
 			}
 		}
@@ -37,24 +36,34 @@ public class Menu {
 	
 	public static void main(String[] args) {
 		
-		User a = new User("Andres", "@", "qwerty", 1);
-		User b = new User("Daniel", "@", "zxcvb", 1);
+		User user1 = new User("Andres", "andres@andrewshop.com", "qwerty", 0001);
+		User user2 = new User("Laura", "laura@andrewshop.com", "qwerty", 0002);
+		User user3 = new User("José Luis", "joséluis@andrewshop.com", "qwerty", 0003);
+		User user4 = new User("Alonso", "alonso@andrewshop.com", "qwerty", 0004);
+		User user5 = new User("Max", "max@andrewshop.com", "qwerty", 0005);
 		
-		Category video = new Category("video", 01);	
-		Category books = new Category("books", 03);
-		Category music = new Category("music", 04);
+		Category video = new Category("video", 001);	
+		Category books = new Category("books", 002);
+		Category music = new Category("music", 003);
+		Category games = new Category("games", 004);
 	
-		Product movie1 = new Product("movie1", 01, "video", 5, 8.5);
-		Product movie2 = new Product("movie2", 02, "video", 5, 8.5);
-		Product movie3 = new Product("movie3", 03, "video", 5, 8.5);
+		Product movie1 = new Product("titanic", 00001, "video", 20, 8.50);
+		Product movie2 = new Product("the hangover", 00010, "video", 20, 9.50);
+		Product movie3 = new Product("saw", 00011, "video", 20, 7.45);
+		Product movie4 = new Product("superman", 00100, "video", 20, 9.99);
+		Product movie5 = new Product("spiderman", 00101, "video", 20, 7.60);
 		
-		Product book1 = new Product("book1",01, "books", 20, 30);
-		Product book2 = new Product("book2",01, "books", 20, 30);
-		Product book3 = new Product("book3",01, "books", 20, 30);
+		Product book1 = new Product("ulisses",00110, "books", 25, 30.50);
+		Product book2 = new Product("oliver twist",00111, "books", 40, 34.3);
+		Product book3 = new Product("moby dick",01000, "books", 55, 45.30);
+		Product book4 = new Product("moby dick",01001, "books", 70, 29.99);
+		Product book5 = new Product("sherlock holmes",01010, "books", 81, 42.45);
 		
-		Product music1 = new Product("cd1", 04, "music", 10, 5.5);
-		Product music2 = new Product("cd2", 05, "music", 10, 5.5);
-		Product music3 = new Product("cd3", 06, "music", 10, 5.5);
+		Product album1 = new Product("Electric Landyland", 04, "music", 10, 5.5);
+		Product album2 = new Product("modern sounds", 05, "music", 10, 5.5);
+		Product album3 = new Product("sticky fingers", 06, "music", 10, 5.5);
+		Product album4 = new Product("born to run", 06, "music", 10, 5.5);
+		Product album5 = new Product("s", 06, "music", 10, 5.5);
 		
 		int opcion = 99;
 		
@@ -132,12 +141,12 @@ public class Menu {
 						product = productB.nextLine();
 						Product actualProductBuy = Product.general.search_product(product);
 						if(actualProductBuy != null) {
-							actualProductBuy.buy_product(actualuser);
+							actualProductBuy.buy_product(actualUser);
 						}
 						break;
 						
 					case 6:
-						printproductsbuy(actualuser);
+						printproductsbuy(actualUser);
 					}
 				}
 			
