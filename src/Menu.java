@@ -83,7 +83,7 @@ public class Menu {
 			if (authentification(username,pass)) {
 				opcion = -1;
 				while (opcion != 0) {
-					System.out.println("Elegir una opción");
+					System.out.println("\nElegir una opción");
 					System.out.println("\n1. Mostrar todos los productos");
 					System.out.println("2. Mostrar todas las categorias");
 					System.out.println("3. Buscar un producto");
@@ -155,17 +155,18 @@ public class Menu {
 						case 6:
 							printproductsbuy(actualUser);
 							break;
+						
 						default: 
 							System.out.println("Elegir una opcion correcta");
 							break;
-						}
-							
+						}		
 					}
 			
 			}else if(!username.equals("exit") || !pass.equals("exit")){
 				System.out.println("exit");
+			}
 		}
-		}while(!username.equals("exit") || !pass.equals("exit"));
+		while(!username.equals("exit") || !pass.equals("exit"));
 	
 	}
 }
