@@ -1,22 +1,22 @@
 
 import java.util.Scanner;
 
+
+
 public class Menu {
 
 	static User actualUser;
 	static Scanner n = new Scanner(System.in);
 
 	static void printProducts(Category n) {
-		for(int i=0; i<n.products.list.size();i++){
-			
+		for(int i=0; i < n.products.list.size(); i++){
 			System.out.println(n.products.list.get(i).getName());	
-		}
-		
+		}			
 	}
+	
 	static void printproductsbuy(User n) {
 		for(int i=0; i<n.buy_Products.size();i++) {
-			System.out.println(n.buy_Products.get(i).getName());
-
+			System.out.println("\n" + n.buy_Products.get(i).getName());
 		}
 	}
 	
@@ -67,30 +67,30 @@ public class Menu {
 		
 		int opcion = 99;
 		
-		System.out.println("Welcome to AndrewShop");
+		System.out.println("----------------Welcome to AndrewShop----------------------");
 
 		String username;
 		String pass;
 		
 		do {
-			System.out.println("Intoduce nombre usuario");
+			System.out.println("\nEnter an username");
 			Scanner name = new Scanner(System.in);
 			username = name.nextLine();
-			System.out.println("Intoduce nombre contraseña");
+			System.out.println("Enter a password");
 			Scanner password = new Scanner(System.in);
 			pass = password.nextLine();
 		
 			if (authentification(username,pass)) {
 				opcion = -1;
 				while (opcion != 0) {
-					System.out.println("\nElegir una opción");
-					System.out.println("\n1. Mostrar todos los productos");
-					System.out.println("2. Mostrar todas las categorias");
-					System.out.println("3. Buscar un producto");
-					System.out.println("4. Buscar un producto por categoría");
-					System.out.println("5. Comprar");
-					System.out.println("6. Carrito");
-					System.out.println("0. Salir");		
+					System.out.println("\nChoose an opcion:");
+					System.out.println("\n1. See all products");
+					System.out.println("2. See all categories");
+					System.out.println("3. Serach a product");
+					System.out.println("4. Search by category ");
+					System.out.println("5. Buy");
+					System.out.println("6. Your products");
+					System.out.println("0. exit");		
 				
 					opcion = n.nextInt();
 				
@@ -112,7 +112,7 @@ public class Menu {
 						case 3:
 							
 							String nameProduct;
-							System.out.println("Introducir el nombre del producto");
+							System.out.println("Enter product's name");
 							Scanner nameP = new Scanner(System.in);
 							nameProduct = nameP.nextLine();
 							Product actualProduct = Product.general.search_product(nameProduct);
@@ -123,26 +123,31 @@ public class Menu {
 								System.out.println("Pryze: "+ actualProduct.getPrize()+"€");
 								System.out.println("ID product: "+ actualProduct.getStock());
 								System.out.println("Stock producto: "+ actualProduct.getStock());
+							}else {
+								System.out.println("Product not found");
 							}
+							
 							break;
 							
 						case 4:
 							
 							String nameCategories;
-							System.out.println("Introducir el nombre de la categoria");
+							System.out.println("Enter category's name");
 							Scanner nameC = new Scanner (System.in);
 							nameCategories = nameC.nextLine();
 							Category actualCategory = Category.general.search_category(nameCategories);
 							
 							if(actualCategory != null) {
 								printProducts(actualCategory);
+							}else {
+								System.out.println("Category`s not found");
 							}
 							break;
 						
 						case 5:
 							
 							String product;
-							System.out.println("Que producto desea comprar");
+							System.out.println("Enter a name");
 							Scanner productB = new Scanner (System.in);
 							product = productB.nextLine();
 							Product actualProductBuy = Product.general.search_product(product);
@@ -153,11 +158,14 @@ public class Menu {
 							break;
 							
 						case 6:
+							
+							System.out.println("\nUsername: "+actualUser.getUsername());
+							System.out.println("Bought products: ");
 							printproductsbuy(actualUser);
 							break;
 						
 						default: 
-							System.out.println("Elegir una opcion correcta");
+							System.out.println("Choose a correct option");
 							break;
 						}		
 					}
