@@ -86,7 +86,7 @@ public class Menu {
 					System.out.println("\nChoose an opcion:");
 					System.out.println("\n1. See all products");
 					System.out.println("2. See all categories");
-					System.out.println("3. Serach a product");
+					System.out.println("3. Search a product");
 					System.out.println("4. Search by category ");
 					System.out.println("5. Buy");
 					System.out.println("6. Your products");
