@@ -1,15 +1,16 @@
 # ProyectJava
 Commit 1
 
-En este proyecto he desarrollado un programa enfocado a una tienda online, en la que es necesario una cuenta y una contraseña, para comprobar autentificación.
-Se ha declarado en 6 clases que son:
 
-class Category
-class List_category
-class List_product
-class Menu
-class Product
-class User
+In this project I have developed a program focused on an online store, in which an account and a password are necessary to verify authentication.
+It has been declared in 6 class that are:
+
+class Category, 
+class List_category, 
+class List_product, 
+class Menu, 
+class Product, 
+class User, 
 
 El menú principal de la tienda es el siguiente:
 
@@ -25,4 +26,3 @@ Tras la autenticación se desplegará el menú secundario
 5. Buy
 6. Your products
 0. exit
-
