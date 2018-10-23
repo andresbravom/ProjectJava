@@ -10,7 +10,11 @@ class List_category,
 class List_product, 
 class Menu, 
 class Product, 
-class User, 
+class User.
+
+
+I have created a general list for category and for produc. En el menu principal es necesario acceder a la tienda con usuario y contraseña
+He creado una lista general para categoria y para producto, en donde se almacena una lista de categoria y productos.
 
 Main menu:
 
