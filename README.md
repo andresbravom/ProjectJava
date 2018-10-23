@@ -3,7 +3,7 @@ Commit 1
 
 
 In this project I have developed a program focused on an online store, in which an account and a password are necessary to verify authentication.
-It has been declared in 6 class that are:
+It has been declared in 6 classes that are:
 
 class Category, 
 class List_category, 
@@ -13,7 +13,7 @@ class Product,
 class User.
 
 
-In the main menu it is necessary to access the store with username and password.
+In the main menu it is necessary to access the store with an username and a password.
 To exit the main menu, type "exit" in the username and password.
 
 Main menu:
@@ -36,11 +36,11 @@ I have created a general list for category and for produc.
 
 
 In option 1. You can see all available products. 
-I maked a list of products general and inside a maked list_product. 
-I go through a list with "search_product function"
+I made a general list of products and inside I made list_product. 
+I go through a list with  the "search_product" function
 
 In option 2. You can see all available categories.
-The "search_product function" does the same as the "search_category function", is structured in the same way.
+The "search_product" function does the same as the "search_category function", is structured in the same way.
 It has a general list and each category has a list.
 
 
