@@ -38,7 +38,7 @@ I have created a general list for category and for product.
 # In option 1. 
 You can see all available products. 
 I made a general list of products and inside I made list_product. 
-I go through a list with  the "search_product" function
+I go through a list with  the "search_product" function.
 
 # In option 2. 
 You can see all available categories.
@@ -47,18 +47,18 @@ It has a general list and each category has a list.
 
 # In option 3. 
 You can search the products after putting the name. 
-In the event that the product does not exist, it sends a message like ("Product not found")
+In the event that the product does not exist, it sends a message like ("Product not found").
 
 # In option 4. 
 You can search the category after putting the name.
-In the even that the category does not exist, it sends a message like ("Category not found")
+In the even that the category does not exist, it sends a message like ("Category not found").
 
 # In option 5. 
 You can buy a product after searching for the product with the name and it is added to the user's purchase history. I developed this function in the product class, this function decreases the stock of products in the store.
 
 # In option 6. 
-The user can check the products that he has purchased, it works as a purchase history
+The user can check the products that he has purchased, it works as a purchase history.
 
-# In ooption 0.
-The user can exit the program
+# In option 0.
+The user can exit the program.
 
