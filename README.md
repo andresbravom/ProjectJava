@@ -32,7 +32,7 @@ After authentication, the secondary menu will be displayed
 6. Your products
 0. exit
 
-I have created a general list for category and for produc.
+I have created a general list for category and for product.
 
 
 # In option 1. 
@@ -58,4 +58,7 @@ You can buy a product after searching for the product with the name and it is ad
 
 # In option 6. 
 The user can check the products that he has purchased, it works as a purchase history
+
+# In ooption 0.
+The user can exit the program
 
