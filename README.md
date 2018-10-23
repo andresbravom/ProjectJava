@@ -35,27 +35,27 @@ After authentication, the secondary menu will be displayed
 I have created a general list for category and for produc.
 
 
-#In option 1. 
+# In option 1. 
 You can see all available products. 
 I made a general list of products and inside I made list_product. 
 I go through a list with  the "search_product" function
 
-In option 2. 
+# In option 2. 
 You can see all available categories.
 The "search_product" function does the same as the "search_category function", is structured in the same way.
 It has a general list and each category has a list.
 
-In option 3. 
+# In option 3. 
 You can search the products after putting the name. 
 In the event that the product does not exist, it sends a message like ("Product not found")
 
-In option 4. 
+# In option 4. 
 You can search the category after putting the name.
 In the even that the category does not exist, it sends a message like ("Category not found")
 
-In option 5. 
+# In option 5. 
 You can buy a product after searching for the product with the name and it is added to the user's purchase history. I developed this function in the product class, this function decreases the stock of products in the store.
 
-In option 6. 
+# In option 6. 
 The user can check the products that he has purchased, it works as a purchase history
 
