@@ -43,5 +43,8 @@ In option 2. You can see all available categories.
 The "search_product" function does the same as the "search_category function", is structured in the same way.
 It has a general list and each category has a list.
 
+In option 3. You can search the products after putting the name. 
+In the event that the product does not exist, it sends a message like ()
+In option 4. busca categorias por el nombre 
 
 
