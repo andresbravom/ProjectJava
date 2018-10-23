@@ -12,12 +12,13 @@ class Menu,
 class Product, 
 class User, 
 
-El menú principal de la tienda es el siguiente:
+Main menu:
 
 1. Enter an username
 2. Enter a password
 
-Tras la autenticación se desplegará el menú secundario
+
+After authentication, the secondary menu will be displayed
 
 1. See all products
 2. See all categories
