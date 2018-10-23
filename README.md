@@ -13,8 +13,8 @@ class Product,
 class User.
 
 
-I have created a general list for category and for produc. En el menu principal es necesario acceder a la tienda con usuario y contraseña
-He creado una lista general para categoria y para producto, en donde se almacena una lista de categoria y productos.
+In the main menu it is necessary to access the store with username and password.
+To exit the main menu, type "exit" in the username and password.
 
 Main menu:
 
@@ -31,3 +31,17 @@ After authentication, the secondary menu will be displayed
 5. Buy
 6. Your products
 0. exit
+
+I have created a general list for category and for produc.
+
+
+In option 1. You can see all available products. 
+I maked a list of products general and inside a maked list_product. 
+I go through a list with "search_product function"
+
+In option 2. You can see all available categories.
+The "search_product function" does the same as the "search_category function", is structured in the same way.
+It has a general list and each category has a list.
+
+
+
