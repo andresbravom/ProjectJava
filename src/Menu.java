@@ -67,7 +67,7 @@ public class Menu {
 		
 		int opcion = 99;
 		
-		System.out.println("----------------Welcome to AndrewShop----------------------");
+		System.out.println("------------------Welcome to AndrewShop----------------------");
 
 		String username;
 		String pass;

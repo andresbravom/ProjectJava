@@ -8,7 +8,8 @@ public class User {
 	private String password;
 	private int id_user;
 	static List<User> users = new ArrayList <User>();
-	 List <Product> buy_Products = new ArrayList <Product>();
+	
+	List <Product> buy_Products = new ArrayList <Product>();
 	
 	public Product get_buy_product(int number_products) {
 		return buy_Products.get(number_products);

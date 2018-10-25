@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Product {
+	class Product {
 	static List_product general = new List_product();
 	
 	private String name;
