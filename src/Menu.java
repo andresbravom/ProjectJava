@@ -34,6 +34,8 @@ public class Menu {
 		return login;
 	}
 	
+	
+	
 	public static void main(String[] args) {
 		
 		User user1 = new User("Andres", "andres@andrewshop.com", "qwerty", 0001);
@@ -65,6 +67,8 @@ public class Menu {
 		Product album4 = new Product("born to run", 01110, "music", 25, 10.00);
 		Product album5 = new Product("crazy", 01111, "music", 40, 13.07);
 		
+		Menu menu = new Menu();
+		
 		int opcion = 99;
 		
 		System.out.println("------------------Welcome to AndrewShop----------------------");
@@ -82,6 +86,8 @@ public class Menu {
 		
 			if (authentification(username,pass)) {
 				opcion = -1;
+			
+					
 				while (opcion != 0) {
 					System.out.println("\nChoose an opcion:");
 					System.out.println("\n1. See all products");
@@ -93,6 +99,8 @@ public class Menu {
 					System.out.println("0. exit");		
 				
 					opcion = n.nextInt();
+				
+					
 				
 					switch(opcion) {
 						case 1:
@@ -168,7 +176,9 @@ public class Menu {
 							System.out.println("Choose a correct option");
 							break;
 						}		
-					}
+				
+			
+				}
 			
 			}else if(!username.equals("exit") || !pass.equals("exit")){
 				System.out.println("exit");
