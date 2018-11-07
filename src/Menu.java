@@ -1,5 +1,9 @@
 
 import java.util.Scanner;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 
 
@@ -34,6 +38,7 @@ public class Menu {
 		return login;
 	}
 	
+
 	public static void main(String[] args) {
 		
 		User user1 = new User("Andres", "andres@andrewshop.com", "qwerty", 0001);
@@ -65,6 +70,8 @@ public class Menu {
 		Product album4 = new Product("born to run", 01110, "music", 25, 10.00);
 		Product album5 = new Product("crazy", 01111, "music", 40, 13.07);
 		
+		Menu menu = new Menu();
+		
 		int opcion = 99;
 		
 		System.out.println("------------------Welcome to AndrewShop----------------------");
@@ -82,6 +89,8 @@ public class Menu {
 		
 			if (authentification(username,pass)) {
 				opcion = -1;
+			
+					
 				while (opcion != 0) {
 					System.out.println("\nChoose an opcion:");
 					System.out.println("\n1. See all products");
@@ -90,9 +99,13 @@ public class Menu {
 					System.out.println("4. Search by category ");
 					System.out.println("5. Buy");
 					System.out.println("6. Your products");
+					System.out.println("7. Contact with us");
+					System.out.println("8. leave a coment");
 					System.out.println("0. exit");		
 				
 					opcion = n.nextInt();
+				
+					
 				
 					switch(opcion) {
 						case 1:
@@ -163,12 +176,60 @@ public class Menu {
 							System.out.println("Bought products: ");
 							printproductsbuy(actualUser);
 							break;
-						
+							
+						case 7:
+							Scanner file = null;
+							
+							try {
+								file = new Scanner(new File("Contact.txt"));
+							}
+							catch(IOException e) {
+								System.out.println("File not found");	
+							}
+							String data;
+							
+							while(file.hasNext()) {
+								data = file.next();
+								System.out.print("\n"+data+ " "+"\n");
+							}
+					
+							break;
+							
+						case 8:
+							Scanner n = new Scanner(System.in);
+								String text;
+								int coments = 0, counter = 0;
+								File fileComent = new File("Coments.txt");
+								
+								try {
+									PrintWriter print = new PrintWriter(new FileWriter(fileComent));
+									System.out.println("How many coments do you want to enter");
+									text = n.nextLine();
+									coments = Integer.parseInt(text);
+									
+									while(counter < coments) {
+										counter = counter+1;
+										System.out.println("Write your coment");
+										text = n.nextLine();
+										print.println(text);
+									}
+									System.out.println("Thaks for your coments");
+									print.close();
+								}
+								catch(IOException e) {
+									System.out.println("File not found");
+								
+								}
+							
+							break;
+							
 						default: 
-							System.out.println("Choose a correct option");
+							System.out.println("\nChoose a correct option");
 							break;
 						}		
-					}
+				
+			
+				}
 			
 			}else if(!username.equals("exit") || !pass.equals("exit")){
 				System.out.println("exit");
