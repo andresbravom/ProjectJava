@@ -89,6 +89,7 @@ public class Menu {
 		
 			if (authentification(username,pass)) {
 				opcion = -1;
+			
 					
 				while (opcion != 0) {
 					System.out.println("\nChoose an opcion:");
@@ -102,7 +103,9 @@ public class Menu {
 					System.out.println("8. leave a coment");
 					System.out.println("0. exit");		
 				
-					opcion = n.nextInt();		
+					opcion = n.nextInt();
+				
+					
 				
 					switch(opcion) {
 						case 1:
@@ -223,7 +226,7 @@ public class Menu {
 						default: 
 							System.out.println("\nChoose a correct option");
 							break;
-						}		
+						}					
 			
 				}
 			
@@ -235,3 +238,5 @@ public class Menu {
 	
 	}
 }
+			
+		
