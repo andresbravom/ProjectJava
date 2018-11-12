@@ -1,6 +1,4 @@
 # ProyectJava
-Commit 1
-
 
 In this project I have developed a program focused on an online store, in which an account and a password are necessary to verify authentication.
 This project has tg¡he following tests:
