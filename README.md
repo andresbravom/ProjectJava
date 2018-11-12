@@ -27,13 +27,15 @@ class List_productTest {
 
 It has been declared in 6 classes that are:
 ```java 
-class Category, 
-class List_category, 
-class List_product, 
-class Menu, 
-class Product, 
-class User.
+class Category
+class List_category
+class List_product
+class Menu
+class Product
+class User
 ```
+For this project it is neccesary to create two files: the first file is used to comments, and the second one is used to show the information about the AndrewShop
+
 
 In the main menu it is necessary to access the store with an username and a password.
 To exit the main menu, type "exit" in the username and password.
