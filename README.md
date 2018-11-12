@@ -6,9 +6,26 @@ In this project I have developed a program focused on an online store, in which 
 This project has tg¡he following tests:
 - CategoryTest
 - List_categoryTest
+- List-productTest
 - ProductTest
 - UserTest
 
+an example of a serious test (List-productTest)
+```java
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class List_productTest {
+
+	@Test
+	void testSearchProduct() {
+		Product actualProduct = Product.general.search_product("Furniture");
+		assertEquals(null, actualProduct);
+	}
+
+}
+´´´
 
 It has been declared in 6 classes that are:
 
