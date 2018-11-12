@@ -107,7 +107,7 @@ Email: andresbravo@andrewshop.com
 
 The user can leave comments and suggestions **Second file**. For example.
 
-*This page is Amazing. Thanks for all*
+*This page is Amazing. Thanks for all.*
 
 ## In option 0.
 The user can exit the program.
