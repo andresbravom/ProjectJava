@@ -37,7 +37,7 @@ After authentication, the secondary menu will be displayed
 4. Search by category
 5. Buy
 6. Your products
-0. exit
+7. exit
 
 I have created a general list for category and for product.
 
