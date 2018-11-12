@@ -37,6 +37,8 @@ class User
 For this project it is neccesary to create two files: the first file is used to comments, and the second one is used to show the information about the AndrewShop
 
 
+
+
 In the main menu it is necessary to access the store with an username and a password.
 To exit the main menu, type "exit" in the username and password.
 
@@ -54,10 +56,11 @@ After authentication, the secondary menu will be displayed
 4. Search by category
 5. Buy
 6. Your products
-0. exit
+7. Contact with us
+8. Leave a coment
+0. Exit
 
 I have created a general list for category and for product.
-
 
 ## In option 1. 
 You can see all available products. 
@@ -82,6 +85,23 @@ You can buy a product after searching for the product with the name and it is ad
 
 ## In option 6. 
 The user can check the products that he has purchased, it works as a purchase history.
+
+## In option 7.
+
+The user can get information from the store. For example
+*---------------AndrewShop---------------
+
+Phone:+34-653-456-789
+Fax:+34-912-111-222-333
+Adress:C/Pirineos,Madrid-España
+Email:andresbravo@andrewshop.com
+
+---------------Networks---------------
+
+Web:https://www.AndrewShop.com/
+Facebook:https://www.facebook.com/AndrewShop/
+Twitter:https://twitter.com/AndrewShop
+LinkedIn:https://www.linkedin.com/in/AndrewShop/*
 
 ## In option 0.
 The user can exit the program.
