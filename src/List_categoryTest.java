@@ -9,7 +9,7 @@ class List_categoryTest {
 
 	@Test
 	void testSearchCategory() {
-		Category actualCategory = Category.general.search_category("Home"");
+		Category actualCategory = Category.general.search_category("Home");
 		assertEquals(null, actualCategory);	
 	}
 }
