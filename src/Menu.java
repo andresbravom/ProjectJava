@@ -100,8 +100,8 @@ public class Menu {
 					System.out.println("5. Buy");
 					System.out.println("6. Your products");
 					System.out.println("7. Contact with us");
-					System.out.println("8. leave a coment");
-					System.out.println("0. exit");		
+					System.out.println("8. Leave a coment");
+					System.out.println("0. Exit");		
 				
 					opcion = n.nextInt();
 				
