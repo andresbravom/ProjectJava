@@ -6,18 +6,35 @@ In this project I have developed a program focused on an online store, in which 
 This project has tg¡he following tests:
 - CategoryTest
 - List_categoryTest
+- List-productTest
 - ProductTest
 - UserTest
 
+an example of a serious test (List-productTest)
+```java
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class List_productTest {
+
+	@Test
+	void testSearchProduct() {
+		Product actualProduct = Product.general.search_product("Furniture");
+		assertEquals(null, actualProduct);
+	}
+```
 
 It has been declared in 6 classes that are:
-
-class Category, 
-class List_category, 
-class List_product, 
-class Menu, 
-class Product, 
-class User.
+```java 
+class Category
+class List_category
+class List_product
+class Menu
+class Product
+class User
+```
+For this project it is neccesary to create two files: the first file is used to comments, and the second one is used to show the information about the AndrewShop
 
 
 In the main menu it is necessary to access the store with an username and a password.
