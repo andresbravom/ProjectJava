@@ -89,7 +89,7 @@ The user can check the products that he has purchased, it works as a purchase hi
 ## In option 7.
 
 The user can get information from the store. For example
-*---------------AndrewShop---------------
+* ---------------AndrewShop---------------
 
 Phone:+34-653-456-789
 Fax:+34-912-111-222-333
@@ -101,7 +101,7 @@ Email:andresbravo@andrewshop.com
 Web:https://www.AndrewShop.com/
 Facebook:https://www.facebook.com/AndrewShop/
 Twitter:https://twitter.com/AndrewShop
-LinkedIn:https://www.linkedin.com/in/AndrewShop/*
+LinkedIn:https://www.linkedin.com/in/AndrewShop/ *
 
 ## In option 0.
 The user can exit the program.
