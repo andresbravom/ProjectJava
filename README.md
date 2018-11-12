@@ -25,7 +25,7 @@ class List_productTest {
 	}
 
 }
-´´´
+
 
 It has been declared in 6 classes that are:
 
