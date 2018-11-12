@@ -34,10 +34,7 @@ class Menu
 class Product
 class User
 ```
-For this project it is neccesary to create two files: the first file is used to comments, and the second one is used to show the information about the AndrewShop
-
-
-
+For this project it is neccesary to create two files: the first file is used to show the information about the AndrewShop and the second one is used to comments.
 
 In the main menu it is necessary to access the store with an username and a password.
 To exit the main menu, type "exit" in the username and password.
@@ -88,7 +85,7 @@ The user can check the products that he has purchased, it works as a purchase hi
 
 ## In option 7.
 
-The user can get information from the store. For example
+The user can get information from the store **First file**. For example.
 
 
 **---------------AndrewShop---------------**
@@ -105,6 +102,13 @@ Email: andresbravo@andrewshop.com
 - Facebook: https://www.facebook.com/AndrewShop/
 - Twitter: https://twitter.com/AndrewShop
 - LinkedIn: https://www.linkedin.com/in/AndrewShop/ 
+
+## in option 8.
+
+The user can leave comments and suggestions **Second file**. For example.
+
+*This page is Amazing*
+*Thanks for all*
 
 ## In option 0.
 The user can exit the program.
