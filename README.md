@@ -23,9 +23,7 @@ class List_productTest {
 		Product actualProduct = Product.general.search_product("Furniture");
 		assertEquals(null, actualProduct);
 	}
-
-}
-
+```
 
 It has been declared in 6 classes that are:
 
