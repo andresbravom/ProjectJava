@@ -84,7 +84,9 @@ The user can check the products that he has purchased, it works as a purchase hi
 ## In option 7.
 
 The user can get information from the store **First file**. For example.
-
+```java
+file = new Scanner(new File("Contact.txt");
+```
 
 **---------------AndrewShop---------------**
 
@@ -103,7 +105,15 @@ Email: andresbravo@andrewshop.com
 
 ## in option 8.
 
-The user can leave comments and suggestions **Second file**. For example.
+The user can leave comments and suggestions **Second file**. For example. 
+```java
+File fileComent = new File("Coments.txt");
+PrintWriter print = new PrintWriter(new FileWriter(fileComent));
+	System.out.println("How many coments do you want to enter");
+	text = n.nextLine();
+	coments = Integer.parseInt(text);
+									
+``` 
 
 *This page is Amazing. Thanks for all.*
 
