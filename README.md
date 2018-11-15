@@ -1,17 +1,38 @@
 # ProyectJava
-Commit 1
-
 
 In this project I have developed a program focused on an online store, in which an account and a password are necessary to verify authentication.
+This project has tg¡he following tests:
+- CategoryTest
+- List_categoryTest
+- List-productTest
+- ProductTest
+- UserTest
+
+an example of a serious test (List-productTest)
+```java
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class List_productTest {
+
+	@Test
+	void testSearchProduct() {
+		Product actualProduct = Product.general.search_product("Furniture");
+		assertEquals(null, actualProduct);
+	}
+```
+
 It has been declared in 6 classes that are:
-
-class Category, 
-class List_category, 
-class List_product, 
-class Menu, 
-class Product, 
-class User.
-
+```java 
+class Category
+class List_category
+class List_product
+class Menu
+class Product
+class User
+```
+For this project it is neccesary to create two files: the first file is used to show the information about the AndrewShop and the second one is used to comments.
 
 In the main menu it is necessary to access the store with an username and a password.
 To exit the main menu, type "exit" in the username and password.
@@ -30,10 +51,11 @@ After authentication, the secondary menu will be displayed
 4. Search by category
 5. Buy
 6. Your products
-0. exit
+7. Contact with us
+8. Leave a coment
+0. Exit
 
 I have created a general list for category and for product.
-
 
 ## In option 1. 
 You can see all available products. 
@@ -58,6 +80,42 @@ You can buy a product after searching for the product with the name and it is ad
 
 ## In option 6. 
 The user can check the products that he has purchased, it works as a purchase history.
+
+## In option 7.
+
+The user can get information from the store **First file**. For example.
+```java
+file = new Scanner(new File("Contact.txt");
+```
+
+**---------------AndrewShop---------------**
+
+- Phone: +34-653-456-789
+- Fax: +34-912-111-222-333
+- Adress:C/Pirineos,Madrid-España
+Email: andresbravo@andrewshop.com
+
+
+**---------------Networks---------------**
+
+- Web: https://www.AndrewShop.com/
+- Facebook: https://www.facebook.com/AndrewShop/
+- Twitter: https://twitter.com/AndrewShop
+- LinkedIn: https://www.linkedin.com/in/AndrewShop/ 
+
+## in option 8.
+
+The user can leave comments and suggestions **Second file**. For example. 
+```java
+File fileComent = new File("Coments.txt");
+PrintWriter print = new PrintWriter(new FileWriter(fileComent));
+	System.out.println("How many coments do you want to enter");
+	text = n.nextLine();
+	coments = Integer.parseInt(text);
+									
+``` 
+
+*This page is Amazing. Thanks for all.*
 
 ## In option 0.
 The user can exit the program.

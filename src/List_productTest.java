@@ -5,8 +5,8 @@ import org.junit.jupiter.api.Test;
 class List_productTest {
 
 	@Test
-	void testSerchCategory() {
-		Product actualProduct = Product.general.search_product("furniture");
+	void testSearchProduct() {
+		Product actualProduct = Product.general.search_product("Furniture");
 		assertEquals(null, actualProduct);
 	}
 
