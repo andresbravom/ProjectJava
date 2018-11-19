@@ -14,13 +14,24 @@ public class Menu {
 
 	static void printProducts(Category n) {
 		for(int i=0; i < n.products.list.size(); i++){
-			System.out.println(n.products.list.get(i).getName());	
+			System.out.println(n.products.list.get(i).getName());
+				
 		}			
 	}
 	
-	static void printproductsbuy(User n) {
+	
+	static void printProductsBuy(User n) {
 		for(int i=0; i<n.buy_Products.size();i++) {
-			System.out.println("\n" + n.buy_Products.get(i).getName());
+			System.out.println("\n" + n.buy_Products.get(i).getName()+" "+n.buy_Products.get(i).getPrize()+"€");
+		}
+	}
+	static void printTotalProductsBuy(User n) {
+		
+		double total = 0;
+		for(int i=0; i<n.buy_Products.size(); i++) {
+			
+			total = total+ n.buy_Products(i);
+			System.out.println(n.buy_Products.get(i).getPrize());
 		}
 	}
 	
@@ -174,7 +185,8 @@ public class Menu {
 							
 							System.out.println("\nUsername: "+actualUser.getUsername());
 							System.out.println("Bought products: ");
-							printproductsbuy(actualUser);
+							printProductsBuy(actualUser);
+							printProductsBuy(actualUser);
 							break;
 							
 						case 7:
