@@ -21,18 +21,19 @@ public class Menu {
 	
 	
 	static void printProductsBuy(User n) {
-		for(int i=0; i<n.buy_Products.size();i++) {
-			System.out.println("\n" + n.buy_Products.get(i).getName()+" "+n.buy_Products.get(i).getPrize()+"€");
+		for(int i=0; i<n.buyList.size();i++) {
+			System.out.print("\n" + n.buyList.get(i).getName()+" "+n.buyList.get(i).getPrize()+"€");
 		}
 	}
 	static void printTotalProductsBuy(User n) {
 		
 		double total = 0;
-		for(int i=0; i<n.buy_Products.size(); i++) {
+		for(int i=0; i<n.buyList.size(); i++) {
 			
-			total = total+ n.buy_Products(i);
-			System.out.println(n.buy_Products.get(i).getPrize());
+			total = total+ n.buyList.get(i).getPrize();
+			
 		}
+		System.out.println("\nTotal: " + total);
 	}
 	
 	static boolean authentification(String username, String password) {
@@ -186,7 +187,7 @@ public class Menu {
 							System.out.println("\nUsername: "+actualUser.getUsername());
 							System.out.println("Bought products: ");
 							printProductsBuy(actualUser);
-							printProductsBuy(actualUser);
+							printTotalProductsBuy(actualUser);
 							break;
 							
 						case 7:

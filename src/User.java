@@ -9,10 +9,10 @@ public class User {
 	private int id_user;
 	static List<User> users = new ArrayList <User>();
 	
-	List <Product> buy_Products = new ArrayList <Product>();
+	List <Product> buyList = new ArrayList <Product>();
 	
 	public Product get_buy_product(int number_products) {
-		return buy_Products.get(number_products);
+		return buyList.get(number_products);
 	}
 	
 	protected String getUsername() {
@@ -49,7 +49,7 @@ public class User {
 	}
 	
 	public void add_product(Product name) {
-		buy_Products.add(name);
+		buyList.add(name);
 	}
 		
 	User(String username, String email, String password, int id_user){
