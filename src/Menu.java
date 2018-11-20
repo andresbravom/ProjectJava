@@ -204,8 +204,19 @@ public class Menu {
 							break;
 							
 						case 7:
+							String encuesta;
+							System.out.println("Desea que sus datos se usen para recibir promociones S/N?");
+							Scanner n = new Scanner (System.in);
+							encuesta = n.nextLine();
 							
-							ProgramDiscount.discountAndrewCode(0.50);
+							if(encuesta.equals("S")||encuesta.equals("s")) {
+								ProgramDiscount.discountAndrewCode(0.50);
+							}else {
+								System.out.println("Debe aceptar para aplicar los descuentos");
+							}
+							
+							
+							
 							break;
 						
 						//8. Contact with us
@@ -229,7 +240,7 @@ public class Menu {
 						
 						//9. Leave a coment
 						case 9:
-							Scanner n = new Scanner(System.in);
+							Scanner newComent = new Scanner(System.in);
 								String text;
 								int coments = 0, counter = 0;
 								File fileComent = new File("Coments.txt");
@@ -237,13 +248,13 @@ public class Menu {
 								try {
 									PrintWriter print = new PrintWriter(new FileWriter(fileComent));
 									System.out.println("How many coments do you want to enter");
-									text = n.nextLine();
+									text = newComent.nextLine();
 									coments = Integer.parseInt(text);
 									
 									while(counter < coments) {
 										counter = counter+1;
 										System.out.println("Write your coment");
-										text = n.nextLine();
+										text = newComent.nextLine();
 										print.println(text);
 									}
 									System.out.println("Thaks for your coments");

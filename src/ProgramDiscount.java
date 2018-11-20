@@ -7,11 +7,11 @@ public class ProgramDiscount {
 	Discount discount = null;
 	
 	try {
-		System.out.println("Introducir el código de descuento");
+		System.out.println("¿Es la primera vez que compra en esta tienda?");
 		Scanner c = new Scanner(System.in);
 		String cd = c.nextLine();
 		
-		if(cd.equals("123")) {
+		if(cd.equals("nuevo")) {
 			discount = new DiscountCode();
 		}else {
 			discount = new ProxyDiscount();
