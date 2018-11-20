@@ -172,7 +172,7 @@ public class Menu {
 						case 5:
 							
 							String product;
-							System.out.println("Enter a name");
+							System.out.println("Enter a name product");
 							Scanner productB = new Scanner (System.in);
 							product = productB.nextLine();
 							Product actualProductBuy = Product.general.search_product(product);
