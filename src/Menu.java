@@ -25,7 +25,7 @@ public class Menu {
 			System.out.print("\n" + n.buyList.get(i).getName()+" "+n.buyList.get(i).getPrize()+"€");
 		}
 	}
-	static void printTotalProductsBuy(User n) {
+	static double printTotalProductsBuy(User n) {
 		
 		double total = 0;
 		for(int i=0; i<n.buyList.size(); i++) {
@@ -34,7 +34,10 @@ public class Menu {
 			
 		}
 		System.out.println("\nTotal: " + total);
+		return total;
 	}
+	
+	
 	
 	static boolean authentification(String username, String password) {
 		boolean login = false;
@@ -108,18 +111,21 @@ public class Menu {
 					System.out.println("\n1. See all products");
 					System.out.println("2. See all categories");
 					System.out.println("3. Search a product");
-					System.out.println("4. Search by category ");
+					System.out.println("4. Search by category");
 					System.out.println("5. Buy");
 					System.out.println("6. Your products");
-					System.out.println("7. Contact with us");
-					System.out.println("8. Leave a coment");
+					System.out.println("7. Apply discout code");
+					System.out.println("8. Contact with us");
+					System.out.println("9. Leave a coment");
 					System.out.println("0. Exit");		
 				
 					opcion = n.nextInt();
 				
 					
-				
+					
 					switch(opcion) {
+					
+						//1. See all products
 						case 1:
 							
 							for(int i=0;i < Product.general.list.size();i++) {
@@ -127,13 +133,15 @@ public class Menu {
 							}
 							break;
 							
+						//2. See all categories	
 						case 2:
 							
 							for(int i=0; i< Category.general.list.size(); i++ ) {
 								System.out.println(Category.general.list.get(i).getName());
 							}
 							break;
-				
+							
+						//3. Search a product
 						case 3:
 							
 							String nameProduct;
@@ -154,6 +162,7 @@ public class Menu {
 							
 							break;
 							
+						//4. Search by category
 						case 4:
 							
 							String nameCategories;
@@ -168,7 +177,8 @@ public class Menu {
 								System.out.println("Category`s not found");
 							}
 							break;
-						
+							
+						//5. Buy
 						case 5:
 							
 							String product;
@@ -181,16 +191,25 @@ public class Menu {
 								actualProductBuy.buy_product(actualUser);
 							}
 							break;
-							
+						
+						//6. Your products
 						case 6:
+							
 							
 							System.out.println("\nUsername: "+actualUser.getUsername());
 							System.out.println("Bought products: ");
 							printProductsBuy(actualUser);
 							printTotalProductsBuy(actualUser);
+							
 							break;
 							
 						case 7:
+							
+							ProgramDiscount.discountAndrewCode(0.50);
+							break;
+						
+						//8. Contact with us
+						case 8:
 							Scanner file = null;
 							
 							try {
@@ -207,8 +226,9 @@ public class Menu {
 							}
 					
 							break;
-							
-						case 8:
+						
+						//9. Leave a coment
+						case 9:
 							Scanner n = new Scanner(System.in);
 								String text;
 								int coments = 0, counter = 0;
