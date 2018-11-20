@@ -59,4 +59,5 @@ public class User {
 		this.id_user = id_user;	
 		users.add(this);
 	}
+
 }
