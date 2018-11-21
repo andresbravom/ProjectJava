@@ -33,7 +33,7 @@ public class Menu {
 			total = total+ n.buyList.get(i).getPrize();
 			
 		}
-		System.out.println("\nTotal: " + total);
+		System.out.println("\nTotal de su compra es: " + total);
 		return total;
 	}
 	
@@ -210,11 +210,10 @@ public class Menu {
 							encuesta = n.nextLine();
 							
 							if(encuesta.equals("S")||encuesta.equals("s")) {
-								ProgramDiscount.discountAndrewCode(0.50);
+								ProgramDiscount.discountAndrewCode(0.20);
 							}else {
 								System.out.println("Debe aceptar para aplicar los descuentos");
-							}
-							
+							}					
 							
 							
 							break;
