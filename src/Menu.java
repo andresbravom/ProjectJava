@@ -1,4 +1,5 @@
 
+import java.util.Locale;
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileWriter;
@@ -85,6 +86,9 @@ public class Menu {
 		Product album4 = new Product("born to run", 01110, "music", 25, 10.00);
 		Product album5 = new Product("crazy", 01111, "music", 40, 13.07);
 		
+		Messages messages = new Messages(new Locale("es", "ES2"));
+
+		
 		Menu menu = new Menu();
 		
 		int opcion = 99;
@@ -117,6 +121,7 @@ public class Menu {
 					System.out.println("7. Apply discout code");
 					System.out.println("8. Contact with us");
 					System.out.println("9. Leave a coment");
+					System.out.println("10. Language");
 					System.out.println("0. Exit");		
 				
 					opcion = n.nextInt();
@@ -264,6 +269,9 @@ public class Menu {
 								
 								}
 							
+							break;
+						case 10:
+							System.out.println(messages.getMessages("opcion1", messages.getLocale()));
 							break;
 							
 						default: 
