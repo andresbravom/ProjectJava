@@ -86,8 +86,11 @@ public class Menu {
 		Product album4 = new Product("born to run", 01110, "music", 25, 10.00);
 		Product album5 = new Product("crazy", 01111, "music", 40, 13.07);
 		
-		Messages messages = new Messages(new Locale("es", "ES2"));
-
+		Locale locale = new Locale("es", "ES");
+		Messages messages = new Messages(locale);
+				
+	
+	
 		
 		Menu menu = new Menu();
 		
@@ -109,8 +112,27 @@ public class Menu {
 			if (authentification(username,pass)) {
 				opcion = -1;
 			
+				System.out.println("Elegir un idioma inglés o español ");
+				Scanner language = new Scanner (System.in);
+				String selectionLanguage = language.nextLine();
 					
 				while (opcion != 0) {
+					if(selectionLanguage.equals("es")) {
+						System.out.println("\n" + messages.getMessages("option", locale));
+						System.out.println("\n" + messages.getMessages("option1", locale));
+						System.out.println("\n" + messages.getMessages("option2", locale));
+						System.out.println("\n" + messages.getMessages("option3", locale));
+						System.out.println("\n" + messages.getMessages("option4", locale));
+						System.out.println("\n" + messages.getMessages("option5", locale));;
+						System.out.println("\n" + messages.getMessages("option6", locale));
+						System.out.println("\n" + messages.getMessages("option7", locale));
+						System.out.println("\n" + messages.getMessages("option8", locale));
+						System.out.println("\n" + messages.getMessages("option9", locale));
+						System.out.println("\n" + messages.getMessages("option10", locale));	
+					
+					opcion = n.nextInt();
+					
+				}	else {
 					System.out.println("\nChoose an opcion:");
 					System.out.println("\n1. See all products");
 					System.out.println("2. See all categories");
@@ -122,12 +144,13 @@ public class Menu {
 					System.out.println("8. Contact with us");
 					System.out.println("9. Leave a coment");
 					System.out.println("10. Language");
-					System.out.println("0. Exit");		
-				
+					System.out.println("0. Exit");
+					
 					opcion = n.nextInt();
+					
+			}	
 				
-					
-					
+				
 					switch(opcion) {
 					
 						//1. See all products
@@ -269,9 +292,6 @@ public class Menu {
 								
 								}
 							
-							break;
-						case 10:
-							System.out.println(messages.getMessages("opcion1", messages.getLocale()));
 							break;
 							
 						default: 

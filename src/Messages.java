@@ -6,7 +6,7 @@ import java.util.ResourceBundle;
 
 public class Messages {
 	private final ResourceBundle messages;
-	private Locale locale;
+	private final Locale locale;
 	
 	public Messages(Locale locale) {
 		this.locale = locale;
@@ -16,9 +16,6 @@ public class Messages {
 		return locale;
 	}
 	
-	public void setLocale(Locale locale) {
-		this.locale = locale;
-	}
 	public String getMessages(String key, Object... arguments) {
 		try {
 			final String pattern = messages.getString(key);
@@ -26,7 +23,7 @@ public class Messages {
 			
 			return format.format(arguments);
 			
-		}catch(MissingResourceException e){
+		}catch(MissingResourceException ex){
 			return "!" + key;
 			
 		}
