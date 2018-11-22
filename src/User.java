@@ -11,6 +11,8 @@ public class User {
 	
 	List <Product> buyList = new ArrayList <Product>();
 	
+	static User actualUser;
+	
 	public Product get_buy_product(int number_products) {
 		return buyList.get(number_products);
 	}
@@ -59,5 +61,16 @@ public class User {
 		this.id_user = id_user;	
 		users.add(this);
 	}
+	
+	User(String username, String password ){
+		this.username = username;
+		this.password = password;
+	}
 
+
+
+
+
+	
+	
 }

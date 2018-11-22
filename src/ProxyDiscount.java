@@ -6,20 +6,14 @@ public class ProxyDiscount implements Discount {
 	
 	@Override
 	public void reduction(Double n) {
-		double total = Main.printTotalProductsBuy(Main.actualUser);
-		
+		double total = ProductsBought.printTotalProductsBuy(User.actualUser);
 		
 		System.out.println("Applying the discount of: " + n + "%");
 		
 		n = total*n;
 		total = total-n;
 	
-		System.out.println("Total of your purchase: "+ total);
-		
-		
-		
+		System.out.println("Total of your purchase: "+ total);	
 		
 	}
-	
-
 }

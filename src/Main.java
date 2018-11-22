@@ -8,52 +8,8 @@ import java.io.PrintWriter;
 
 public class Main {
 
-	static User actualUser;
 	static Scanner n = new Scanner(System.in);
 
-	static void printProducts(Category n) {
-		
-		System.out.println("\nProducts in stock:");
-		
-		for(int i=0; i < n.products.list.size(); i++){
-			
-			System.out.println("\n" + n.products.list.get(i).getName() + " " + n.products.list.get(i).getPrize() + "€");
-				
-		}			
-	}
-
-	static void printProductsBuy(User n) {
-		for(int i=0; i<n.buyList.size();i++) {
-			System.out.print("\n" + n.buyList.get(i).getName()+" "+n.buyList.get(i).getPrize()+"€");
-		}
-	}
-	static double printTotalProductsBuy(User n) {
-		
-		double total = 0;
-		for(int i=0; i<n.buyList.size(); i++) {
-			
-			total = total+ n.buyList.get(i).getPrize();
-			
-		}
-		
-		System.out.println("Total of your purchase: " + total+"€");
-		return total;
-	}
-	
-	static boolean authentification(String username, String password) {
-		boolean login = false;
-		
-		for(int i = 0; i < User.users.size(); i++) {
-			if(username.equals(User.users.get(i).getUsername()) && password.equals(User.users.get(i).getPassword())) {
-				login = true;
-				actualUser = User.users.get(i);
-				break;
-			}
-		}
-		
-		return login;
-	}
-	
 	public static void main(String[] args) {
 		
 		Menu menu = new Menu();
@@ -104,7 +60,7 @@ public class Main {
 			Scanner password = new Scanner(System.in);
 			pass = password.nextLine();
 		
-			if (authentification(username,pass)) {
+			if (AuthentificationUser.authentification(username,pass)) {
 				opcion = -1;
 			
 				System.out.println("Choose a laguage: ");
@@ -183,7 +139,7 @@ public class Main {
 							Category actualCategory = Category.general.search_category(nameCategories);
 							
 							if(actualCategory != null) {
-								printProducts(actualCategory);
+								Product.printProducts(actualCategory);
 							}else {
 								System.out.println("Category not found");
 							}
@@ -199,7 +155,7 @@ public class Main {
 							Product actualProductBuy = Product.general.search_product(product);
 							
 							if(actualProductBuy != null) {
-								actualProductBuy.buy_product(actualUser);
+								actualProductBuy.buy_product(User.actualUser);
 								
 								System.out.println("\n¡Thanks for your purchase!");
 								
@@ -212,11 +168,11 @@ public class Main {
 						case 6:
 							
 							
-							System.out.println("\nUsername: "+actualUser.getUsername());
+							System.out.println("\nUsername: "+User.actualUser.getUsername());
 							System.out.println("Bought products: ");
-							printProductsBuy(actualUser);
+							ProductsBought.printProductsBuy(User.actualUser);
 							System.out.println("\n------------------------------");
-							printTotalProductsBuy(actualUser);
+							ProductsBought.printTotalProductsBuy(User.actualUser);
 							
 							break;
 							
@@ -254,7 +210,7 @@ public class Main {
 					
 							break;
 						
-						//9. Leave a coment
+						//9. Leave a coments
 						case 9:
 							Scanner newComent = new Scanner(System.in);
 								String text;

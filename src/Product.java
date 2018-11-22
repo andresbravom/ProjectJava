@@ -48,9 +48,8 @@ import java.util.Scanner;
 	
 		Category.general.search_category(category_name).products.insert_product(this);
 		general.insert_product(this);
-	
-	}
-	
+	}	
+
 	public boolean buy_product(User name) {
 		boolean error = true;
 		
@@ -62,5 +61,17 @@ import java.util.Scanner;
 			
 		return error;
 	}
+	static void printProducts(Category n) {
+		
+		System.out.println("\nProducts in stock:");
+		
+		for(int i=0; i < n.products.list.size(); i++){
+			
+			System.out.println("\n" + n.products.list.get(i).getName() + " " + n.products.list.get(i).getPrize() + "€");
+				
+		}			
+	}
+	
+	
 }
 	
