@@ -9,12 +9,12 @@ public class ProxyDiscount implements Discount {
 		double total = Main.printTotalProductsBuy(Main.actualUser);
 		
 		
-		System.out.println("Aplicando el descuento del: " + n + "%");
+		System.out.println("Applying the discount of: " + n + "%");
 		
 		n = total*n;
 		total = total-n;
 	
-		System.out.println("El nuevo total es: "+ total);
+		System.out.println("Total of your purchase: "+ total);
 		
 		
 		
