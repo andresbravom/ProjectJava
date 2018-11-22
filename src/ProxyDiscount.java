@@ -6,7 +6,7 @@ public class ProxyDiscount implements Discount {
 	
 	@Override
 	public void reduction(Double n) {
-		double total = Menu.printTotalProductsBuy(Menu.actualUser);
+		double total = Main.printTotalProductsBuy(Main.actualUser);
 		
 		
 		System.out.println("Aplicando el descuento del: " + n + "%");

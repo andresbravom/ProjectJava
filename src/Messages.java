@@ -10,7 +10,7 @@ public class Messages {
 	
 	public Messages(Locale locale) {
 		this.locale = locale;
-		messages = ResourceBundle.getBundle("MessagesBundle", locale);
+		messages = ResourceBundle.getBundle("Languages", locale);
 	}
 	public Locale getLocale() {
 		return locale;
