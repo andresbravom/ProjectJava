@@ -86,7 +86,7 @@ public class Menu {
 		Product album4 = new Product("born to run", 01110, "music", 25, 10.00);
 		Product album5 = new Product("crazy", 01111, "music", 40, 13.07);
 		
-		Locale locale = new Locale("es", "ES");
+		Locale locale = new Locale("es", "ES2");
 		Messages messages = new Messages(locale);
 				
 	
@@ -123,7 +123,7 @@ public class Menu {
 						System.out.println("\n" + messages.getMessages("option2", locale));
 						System.out.println("\n" + messages.getMessages("option3", locale));
 						System.out.println("\n" + messages.getMessages("option4", locale));
-						System.out.println("\n" + messages.getMessages("option5", locale));;
+						System.out.println("\n" + messages.getMessages("option5", locale));
 						System.out.println("\n" + messages.getMessages("option6", locale));
 						System.out.println("\n" + messages.getMessages("option7", locale));
 						System.out.println("\n" + messages.getMessages("option8", locale));
@@ -133,19 +133,19 @@ public class Menu {
 					opcion = n.nextInt();
 					
 				}	else {
-					System.out.println("\nChoose an opcion:");
-					System.out.println("\n1. See all products");
-					System.out.println("2. See all categories");
-					System.out.println("3. Search a product");
-					System.out.println("4. Search by category");
-					System.out.println("5. Buy");
-					System.out.println("6. Your products");
-					System.out.println("7. Apply discout code");
-					System.out.println("8. Contact with us");
-					System.out.println("9. Leave a coment");
-					System.out.println("10. Language");
-					System.out.println("0. Exit");
-					
+						System.out.println("\nChoose an opcion:");
+						System.out.println("\n1. See all products");
+						System.out.println("2. See all categories");
+						System.out.println("3. Search a product");
+						System.out.println("4. Search by category");
+						System.out.println("5. Buy");
+						System.out.println("6. Your products");
+						System.out.println("7. Apply discout code");
+						System.out.println("8. Contact with us");
+						System.out.println("9. Leave a coment");
+						System.out.println("10. Language");
+						System.out.println("0. Exit");
+						
 					opcion = n.nextInt();
 					
 			}	
