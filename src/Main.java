@@ -12,7 +12,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		Menu menu = new Menu();
+		
 		
 		User user1 = new User("Andres", "andres@andrewshop.com", "qwerty", 0001);
 		User user2 = new User("Laura", "laura@andrewshop.com", "qwerty", 0002);
@@ -42,7 +42,7 @@ public class Main {
 		Product album3 = new Product("Sticky fingers", 01101, "Music", 60, 15.99);
 		Product album4 = new Product("Born to run", 01110, "Music", 25, 10.00);
 		Product album5 = new Product("Crazy", 01111, "Music", 40, 13.07);
-
+	
 		Main menu1 = new Main();
 		
 		int opcion = 99;
@@ -70,28 +70,47 @@ public class Main {
 				
 				Scanner language = new Scanner (System.in);
 				String selectionLanguage = language.nextLine();
-					
+				
+				Menu menu = null;
+				Messages messages = null;
+				Locale locale = null;
+				
+				if(selectionLanguage.equals("1")) {
+					locale = new Locale("en", "US");
+					menu = new Menu(locale);
+					messages = new Messages(locale);
+				}else if(selectionLanguage.equals("2")) {
+					locale = new Locale("es", "ES");
+					menu = new Menu(locale);
+					messages = new Messages(locale);				
+				}else if(selectionLanguage.equals("3")) {
+					locale = new Locale("fr", "FR");
+					menu = new Menu(locale);
+					messages = new Messages(locale);
+				}				
+			
 				while (opcion != 0) {
 					
-					if(selectionLanguage.equals("1")) {
-						
-						menu.MenuEnglish();	
-						opcion = n.nextInt();
+					menu.menu();
 					
-				
-					}else if (selectionLanguage.equals("2"))  {
-						
-						menu.MenuSpanish();
-						opcion = n.nextInt();
-							
-					}else if (selectionLanguage.equals("3")) {
-						opcion = n.nextInt();
-					}
+					opcion = language.nextInt();
+					
 					switch(opcion) {
 					
 						//1. See all products
 						case 1:
-							
+							if(selectionLanguage.equals("1")) {
+								
+								System.out.println("\n" + messages.getMessages("option2", locale));
+						
+							}else if (selectionLanguage.equals("2"))  {
+								
+								System.out.println("\n" + messages.getMessages("productsInStock", locale));
+									
+							}else if (selectionLanguage.equals("3")) {
+			
+								opcion = n.nextInt();
+							}
 							System.out.println("\nProducts in stock");
 							
 							for(int i=0;i < Product.general.list.size();i++) {
@@ -101,7 +120,7 @@ public class Main {
 							
 						//2. See all categories	
 						case 2:
-							System.out.println("\nCategories:");
+							System.out.println("\nCategories:" );
 							
 							for(int i=0; i< Category.general.list.size(); i++ ) {
 								System.out.println("\n" + Category.general.list.get(i).getName());
@@ -213,29 +232,29 @@ public class Main {
 						//9. Leave a coments
 						case 9:
 							Scanner newComent = new Scanner(System.in);
-								String text;
-								int coments = 0, counter = 0;
-								File fileComent = new File("Coments.txt");
+							String text;
+							int coments = 0, counter = 0;
+							File fileComent = new File("Coments.txt");
+							
+							try {
+								PrintWriter print = new PrintWriter(new FileWriter(fileComent));
+								System.out.println("How many coments do you want to enter");
+								text = newComent.nextLine();
+								coments = Integer.parseInt(text);
 								
-								try {
-									PrintWriter print = new PrintWriter(new FileWriter(fileComent));
-									System.out.println("How many coments do you want to enter");
+								while(counter < coments) {
+									counter = counter+1;
+									System.out.println("Write your coment");
 									text = newComent.nextLine();
-									coments = Integer.parseInt(text);
-									
-									while(counter < coments) {
-										counter = counter+1;
-										System.out.println("Write your coment");
-										text = newComent.nextLine();
-										print.println(text);
-									}
-									System.out.println("Thaks for your coments");
-									print.close();
+									print.println(text);
 								}
-								catch(IOException e) {
-									System.out.println("File not found");
-								
-								}
+								System.out.println("Thaks for your coments");
+								print.close();
+							}
+							catch(IOException e) {
+								System.out.println("File not found");
+							
+							}
 							
 							break;
 							
