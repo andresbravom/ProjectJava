@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class List_category {
+public class ListCategory {
 	
 	List<Category> list = new ArrayList<Category>();
 	

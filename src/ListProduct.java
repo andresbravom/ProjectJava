@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class List_product {
+public class ListProduct {
 	
 	List<Product> list = new ArrayList<Product>();
 	

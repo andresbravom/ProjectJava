@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
 	class Product {
-	static List_product general = new List_product();
+	static ListProduct general = new ListProduct();
 	
 	private String name;
-	private int id_product;
+	private int idProduct;
 	private int stock;
 	private double prize;
 	
@@ -17,11 +17,11 @@ import java.util.Scanner;
 	}
 	
 	protected int getId() {
-		return id_product;
+		return idProduct;
 	}
 	
 	protected void setId(int id) {
-		this.id_product = id;
+		this.idProduct = id;
 	}
 	
 	protected int getStock() {
@@ -42,7 +42,7 @@ import java.util.Scanner;
 	
 	Product(String name, int id_product, String category_name, int stock, double prize){
 		this.name = name;
-		this.id_product = id_product;
+		this.idProduct = id_product;
 		this.stock = stock;
 		this.prize = prize;
 	

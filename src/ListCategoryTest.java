@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-class List_categoryTest {
+class ListCategoryTest {
 
 	@Test
 	void testSearchCategory() {

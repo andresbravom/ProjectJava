@@ -6,6 +6,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+
+
 public class Main {
 
 	static Scanner n = new Scanner(System.in);
@@ -63,6 +65,7 @@ public class Main {
 			if (AuthentificationUser.authentification(username,pass)) {
 				opcion = -1;
 			
+				
 				System.out.println("Choose a laguage: ");
 				System.out.println("\n1. English");
 				System.out.println("2. Spanish");
@@ -74,6 +77,9 @@ public class Main {
 				Menu menu = null;
 				Messages messages = null;
 				Locale locale = null;
+				
+				
+					
 				
 				if(selectionLanguage.equals("1")) {
 					locale = new Locale("en", "US");
@@ -87,11 +93,13 @@ public class Main {
 					locale = new Locale("fr", "FR");
 					menu = new Menu(locale);
 					messages = new Messages(locale);
-				}				
+				}	
+				else {
+					System.out.println("Choose a correct option");
+				}
 			
 				while (opcion != 0) {
 					
-					menu.menu();
 					
 					opcion = language.nextInt();
 					

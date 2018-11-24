@@ -2,8 +2,8 @@ public class Category {
 	
 	private String name;
 	private int id_category;
-	static List_category general = new List_category();
-	List_product products = new List_product(); 
+	static ListCategory general = new ListCategory();
+	ListProduct products = new ListProduct(); 
 	
 
 	public int getId_category() {
