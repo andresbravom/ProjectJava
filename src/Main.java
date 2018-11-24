@@ -100,7 +100,7 @@ public class Main {
 			
 				while (opcion != 0) {
 					
-					
+					menu.menu();
 					opcion = language.nextInt();
 					
 					switch(opcion) {
@@ -119,7 +119,7 @@ public class Main {
 			
 								opcion = n.nextInt();
 							}
-							System.out.println("\nProducts in stock");
+							System.out.println("\nhola");
 							
 							for(int i=0;i < Product.general.list.size();i++) {
 								System.out.println("\n" + Product.general.list.get(i).getName());
@@ -212,7 +212,7 @@ public class Main {
 							if(encuesta.equals("Y")||encuesta.equals("y")) {
 								ProgramDiscount.discountAndrewCode(0.20);
 							}else {
-								System.out.println("You must accept to apply the discounts");
+								System.out.println("You must accept the conditions to apply the discounts");
 							}					
 							
 							
@@ -267,7 +267,7 @@ public class Main {
 							break;
 							
 						default: 
-							System.out.println("\nChoose a correct option");
+							System.out.println("\n" + messages.getMessages("chooseOptionCorrect", locale));
 							break;
 						}					
 			
