@@ -1,3 +1,5 @@
+import java.util.Locale;
+
 public class Category {
 	
 	private String name;
@@ -5,6 +7,8 @@ public class Category {
 	static ListCategory general = new ListCategory();
 	ListProduct products = new ListProduct(); 
 	
+	static Messages messages = null;
+	static Locale locale = null;
 
 	public int getId_category() {
 		return id_category;

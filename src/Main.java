@@ -76,10 +76,7 @@ public class Main {
 				
 				Menu menu = null;
 				Messages messages = null;
-				Locale locale = null;
-				
-				
-					
+				Locale locale = null;	
 				
 				if(selectionLanguage.equals("1")) {
 					locale = new Locale("en", "US");
@@ -107,19 +104,8 @@ public class Main {
 					
 						//1. See all products
 						case 1:
-							if(selectionLanguage.equals("1")) {
-								
-								System.out.println("\n" + messages.getMessages("option2", locale));
-						
-							}else if (selectionLanguage.equals("2"))  {
-								
-								System.out.println("\n" + messages.getMessages("productsInStock", locale));
-									
-							}else if (selectionLanguage.equals("3")) {
 			
-								opcion = n.nextInt();
-							}
-							System.out.println("\nhola");
+							System.out.println("\n"+ messages.getMessages("productsInStock", locale));
 							
 							for(int i=0;i < Product.general.list.size();i++) {
 								System.out.println("\n" + Product.general.list.get(i).getName());
@@ -128,7 +114,7 @@ public class Main {
 							
 						//2. See all categories	
 						case 2:
-							System.out.println("\nCategories:" );
+							System.out.println("\n" + messages.getMessages("categories", locale));
 							
 							for(int i=0; i< Category.general.list.size(); i++ ) {
 								System.out.println("\n" + Category.general.list.get(i).getName());
@@ -139,7 +125,7 @@ public class Main {
 						case 3:
 							
 							String nameProduct;
-							System.out.println("Enter product's name");
+							System.out.println("\n" + messages.getMessages("enterTheProductsName", locale));
 							Scanner nameP = new Scanner(System.in);
 							nameProduct = nameP.nextLine();
 							Product actualProduct = Product.general.search_product(nameProduct);
@@ -147,11 +133,11 @@ public class Main {
 							if(actualProduct != null){
 								
 								System.out.println("\n"+ actualProduct.getName() + ":");
-								System.out.println("\nPryze: "+ actualProduct.getPrize()+"€");
-								System.out.println("\nID product: "+ actualProduct.getStock());
-								System.out.println("\nStock product: "+ actualProduct.getStock());
+								System.out.println("\n"+ messages.getMessages("price", locale) + " " + actualProduct.getPrize()+"€");
+								System.out.println("\n"+ messages.getMessages("idProduct", locale) + " " + actualProduct.getStock());
+								System.out.println("\n"+ messages.getMessages("stockProduct", locale) + " " +actualProduct.getStock());
 							}else {
-								System.out.println("Product not found");
+								System.out.println("\n" + messages.getMessages("productNotFound", locale));
 							}
 							
 							break;
@@ -160,15 +146,15 @@ public class Main {
 						case 4:
 							
 							String nameCategories;
-							System.out.println("Enter the category's name:");
+							System.out.println("\n" + messages.getMessages("enterCategory", locale));
 							Scanner nameC = new Scanner (System.in);
 							nameCategories = nameC.nextLine();
-							Category actualCategory = Category.general.search_category(nameCategories);
+							Category actualCategory = Category.general.searchCategory(nameCategories);
 							
 							if(actualCategory != null) {
 								Product.printProducts(actualCategory);
 							}else {
-								System.out.println("Category not found");
+								System.out.println("\n" + messages.getMessages("categoryNotFound", locale));
 							}
 							break;
 							
@@ -176,7 +162,7 @@ public class Main {
 						case 5:
 							
 							String product;
-							System.out.println("Enter the name´s product");
+							System.out.println("\n" + messages.getMessages("enterTheProductsName", locale));
 							Scanner productB = new Scanner (System.in);
 							product = productB.nextLine();
 							Product actualProductBuy = Product.general.search_product(product);
@@ -184,10 +170,10 @@ public class Main {
 							if(actualProductBuy != null) {
 								actualProductBuy.buy_product(User.actualUser);
 								
-								System.out.println("\n¡Thanks for your purchase!");
+								System.out.println("\n" + messages.getMessages("ThanksForYourPurchase", locale));
 								
 							}else {
-								System.out.println("Product not found");
+								System.out.println("\n" + messages.getMessages("productNotFound", locale));
 							}
 							break;
 						
@@ -195,8 +181,8 @@ public class Main {
 						case 6:
 							
 							
-							System.out.println("\nUsername: "+User.actualUser.getUsername());
-							System.out.println("Bought products: ");
+							System.out.println("\n"+messages.getMessages("username", locale) + User.actualUser.getUsername());
+							System.out.println("\n" + messages.getMessages("boughtProducts", locale));
 							ProductsBought.printProductsBuy(User.actualUser);
 							System.out.println("\n------------------------------");
 							ProductsBought.printTotalProductsBuy(User.actualUser);
@@ -205,14 +191,14 @@ public class Main {
 							
 						case 7:
 							String encuesta;
-							System.out.println("\nYou want your data used to receive promotions Y/N?");
+							System.out.println("\n" + messages.getMessages("YouWant", locale));
 							Scanner n = new Scanner (System.in);
 							encuesta = n.nextLine();
 							
-							if(encuesta.equals("Y")||encuesta.equals("y")) {
+							if(encuesta.equals("Y") || encuesta.equals("y") || encuesta.equals("S") || encuesta.equals("s") || encuesta.equals("O") || encuesta.equals("o")) {
 								ProgramDiscount.discountAndrewCode(0.20);
 							}else {
-								System.out.println("You must accept the conditions to apply the discounts");
+								System.out.println("\n" + messages.getMessages("youMost", locale));
 							}					
 							
 							
@@ -252,11 +238,11 @@ public class Main {
 								
 								while(counter < coments) {
 									counter = counter+1;
-									System.out.println("Write your coment");
+									System.out.println("\n" + messages.getMessages("howManyComments", locale));
 									text = newComent.nextLine();
 									print.println(text);
 								}
-								System.out.println("Thaks for your coments");
+								System.out.println("\n" + messages.getMessages("Thanks", locale));
 								print.close();
 							}
 							catch(IOException e) {

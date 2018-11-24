@@ -1,7 +1,11 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class ListProduct {
+	
+	static Messages messages = null;
+	static Locale locale = null;
 	
 	List<Product> list = new ArrayList<Product>();
 	

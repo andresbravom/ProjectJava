@@ -1,3 +1,4 @@
+import java.util.Locale;
 import java.util.Scanner;
 
 	class Product {
@@ -7,6 +8,9 @@ import java.util.Scanner;
 	private int idProduct;
 	private int stock;
 	private double prize;
+	
+	static Messages messages = null;
+	static Locale locale = null;
 	
 	protected String getName() {
 		return name;
@@ -46,7 +50,7 @@ import java.util.Scanner;
 		this.stock = stock;
 		this.prize = prize;
 	
-		Category.general.search_category(category_name).products.insert_product(this);
+		Category.general.searchCategory(category_name).products.insert_product(this);
 		general.insert_product(this);
 	}	
 
@@ -63,7 +67,9 @@ import java.util.Scanner;
 	}
 	static void printProducts(Category n) {
 		
-		System.out.println("\nProducts in stock:");
+		
+		
+		System.out.println("\nProducts in stock");
 		
 		for(int i=0; i < n.products.list.size(); i++){
 			

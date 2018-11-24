@@ -1,7 +1,11 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class ListCategory {
+	
+	static Messages messages = null;
+	static Locale locale = null;
 	
 	List<Category> list = new ArrayList<Category>();
 	
@@ -9,13 +13,13 @@ public class ListCategory {
 		list.add(name);
 	}
 	
-	public Category search_category(String name_category) {
+	public Category searchCategory(String nameCategory) {
 		
 		int i = 0;
 		boolean found = false;
 		while(i < list.size()) {
 			
-			if (name_category.equals( list.get(i).getName()))  {
+			if (nameCategory.equals( list.get(i).getName()))  {
 				found = true;
 				break;
 			}
@@ -23,8 +27,8 @@ public class ListCategory {
 		}
 		if (found) {
 			return list.get(i);
-		}else
+		}else {
 			return null;
-			
+		}
 	}
 }
