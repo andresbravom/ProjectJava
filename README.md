@@ -36,7 +36,7 @@ class Category
 class Currency
 interface Discount
 class Discount
-calss DiscountCode
+class DiscountCode
 class ListCategory
 class ListProduct
 class Main
