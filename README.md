@@ -250,6 +250,7 @@ This software is licensed under [GPL-3.0 license](https://www.gnu.org/licenses/q
 
 ## Credits
 Creator of the project: [@andresbravom](https://github.com/andresbravom)
+
 Colaborators:
 - [@LauraRgz](https://github.com/LauraRgz)
 - [@joseluishozg](https://github.com/joseluishozg)
