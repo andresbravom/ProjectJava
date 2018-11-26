@@ -42,6 +42,50 @@ Main menu:
 1. Enter an username
 2. Enter a password
 
+After authentication, the user can choose a language
+```java
+Choose a laguage: 
+1. English
+2. Spanish
+3. French
+				
+```
+To implement the i18n API, the class has been created ``` public class Messages ``` 
+
+```java
+import java.text.MessageFormat;
+import java.util.Locale;
+import java.util.MissingResourceException;
+import java.util.Objects;
+import java.util.ResourceBundle;
+
+public class Messages {
+	private final ResourceBundle messages;
+	private final Locale locale;
+	
+	public Messages(Locale locale) {
+		this.locale = locale;
+		messages = ResourceBundle.getBundle("Languages", locale);
+	}
+	public Locale getLocale() {
+		return locale;
+	}
+	
+	public String getMessages(String key, Object... arguments) {
+		try {
+			final String pattern = messages.getString(key);
+			final MessageFormat format = new MessageFormat(pattern, getLocale());
+			
+			return format.format(arguments);
+			
+		}catch(MissingResourceException ex){
+			return "!" + key;
+			
+		}
+	}
+
+}
+```
 
 After authentication, the secondary menu will be displayed
 
@@ -82,6 +126,50 @@ You can buy a product after searching for the product with the name and it is ad
 The user can check the products that he has purchased, it works as a purchase history.
 
 ## In option 7.
+In this option the user can apply discounts when accepting the conditions to send emails with advertising.
+this option allows you to apply the 20% discount, also wraps your gift if you are a new customer.
+
+An interface has been created 
+```javapublic interface Discount {
+	public void reduction(Double n);
+} 
+``` 
+A Program class is created where the question will be asked to know if it is a new buyer or a regular buyer
+```java
+import java.util.Scanner;
+
+public class ProgramDiscount {
+
+	public static void discountAndrewCode(Double n) {
+		
+	Discount discount = null;
+	
+	try {
+		System.out.println("Is it the first time you buy at this store? Y/N");
+		Scanner c = new Scanner(System.in);
+		String cd = c.nextLine();
+		
+		if(cd.equals("y")|| cd.equals("Y")) {
+			
+			discount = new DiscountCode();
+			
+		}else {
+		
+			discount = new ProxyDiscount();
+				
+		}
+		
+	}catch(Exception e) {
+		return;
+	}
+	discount.reduction(0.20);
+	
+	}
+
+}
+```
+
+## In option 8.
 
 The user can get information from the store **First file**. For example.
 ```java
@@ -103,7 +191,7 @@ Email: andresbravo@andrewshop.com
 - Twitter: https://twitter.com/AndrewShop
 - LinkedIn: https://www.linkedin.com/in/AndrewShop/ 
 
-## in option 8.
+## in option 9.
 
 The user can leave comments and suggestions **Second file**. For example. 
 ```java
@@ -120,3 +208,9 @@ PrintWriter print = new PrintWriter(new FileWriter(fileComent));
 ## In option 0.
 The user can exit the program.
 
+## License
+
+This software is licensed under [GPL-3.0 license](https://www.gnu.org/licenses/quick-guide-gplv3). For more information please read [LICENSE](./LICENSE).
+
+## Credits
+Creator of the project: [@andresbravom](https://github.com/andresbravom)

@@ -48,6 +48,7 @@ public class Main {
 		Product album5 = new Product("Crazy", 01111, "Music", 40, 13.07);
 	
 		Main menu1 = new Main();
+		Currency money = new Currency();
 		int opcion = 99;
 		
 		
@@ -74,17 +75,16 @@ public class Main {
 				System.out.println("3. French");
 				
 				Scanner language = new Scanner (System.in);
-				String selectionLanguage = language.nextLine();
 				
 				Menu menu = null;
 				Messages messages = null;
 				Locale locale = null;	
-				
-				if(selectionLanguage.equals("1")) {
-					locale = new Locale("en", "US");
-					menu = new Menu(locale);
-					messages = new Messages(locale);
-				}else if(selectionLanguage.equals("2")) {
+				String selectionLanguage = language.nextLine();
+				/*
+				 * If condition to evaluate language if it is not equal
+				 * then the default language will be english. 
+				 */
+				if(selectionLanguage.equals("2")) {
 					locale = new Locale("es", "ES");
 					menu = new Menu(locale);
 					messages = new Messages(locale);				
@@ -92,10 +92,12 @@ public class Main {
 					locale = new Locale("fr", "FR");
 					menu = new Menu(locale);
 					messages = new Messages(locale);
-				}	
-				else {
-					System.out.println("Choose a correct option");
+				}else {
+					locale = new Locale("en", "US");
+					menu = new Menu(locale);
+					messages = new Messages(locale);
 				}
+				
 			
 				while (opcion != 0) {
 					
@@ -253,6 +255,9 @@ public class Main {
 							}
 							
 							break;
+							
+						case 10:
+							money.currencyExchange();
 							
 						default: 
 							System.out.println("\n" + messages.getMessages("chooseOptionCorrect", locale));
