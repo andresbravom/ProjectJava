@@ -44,10 +44,10 @@ Main menu:
 
 After authentication, the user can choose a language
 ```java
-System.out.println("Choose a laguage: ");
-System.out.println("\n1. English");
-System.out.println("2. Spanish");
-System.out.println("3. French");
+Choose a laguage: 
+1. English
+2. Spanish
+3. French
 				
 ```
 To implement the i18n API, the class has been created ``` public class Messages ``` 
