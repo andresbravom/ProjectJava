@@ -50,7 +50,7 @@ System.out.println("2. Spanish");
 System.out.println("3. French");
 				
 ```
-To implement the i18n API, the class has been created ``` java public class Messages ´´´ 
+To implement the i18n API, the class has been created ``` public class Messages ``` 
 
 
 
