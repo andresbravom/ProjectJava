@@ -42,6 +42,15 @@ Main menu:
 1. Enter an username
 2. Enter a password
 
+After authentication, the user can choose a language
+```java
+System.out.println("Choose a laguage: ");
+	System.out.println("\n1. English");
+	System.out.println("2. Spanish");
+	System.out.println("3. French");
+				
+```
+
 
 After authentication, the secondary menu will be displayed
 
@@ -82,6 +91,10 @@ You can buy a product after searching for the product with the name and it is ad
 The user can check the products that he has purchased, it works as a purchase history.
 
 ## In option 7.
+In this option the user can apply discounts when accepting the conditions to send emails with advertising.
+this option allows you to apply the 20% discount, also wraps your gift if you are a new customer.
+
+## In option 8.
 
 The user can get information from the store **First file**. For example.
 ```java
@@ -103,7 +116,7 @@ Email: andresbravo@andrewshop.com
 - Twitter: https://twitter.com/AndrewShop
 - LinkedIn: https://www.linkedin.com/in/AndrewShop/ 
 
-## in option 8.
+## in option 9.
 
 The user can leave comments and suggestions **Second file**. For example. 
 ```java
