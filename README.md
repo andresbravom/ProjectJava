@@ -208,3 +208,9 @@ PrintWriter print = new PrintWriter(new FileWriter(fileComent));
 ## In option 0.
 The user can exit the program.
 
+## License
+
+This software is licensed under [GPL-3.0 license](https://www.gnu.org/licenses/quick-guide-gplv3). For more information please read [LICENSE](./LICENSE).
+
+## Credits
+Creator of the project: [@andresbravom](https://github.com/andresbravom)
