@@ -116,9 +116,12 @@ public class Main {
 			
 							System.out.println("\n"+ messages.getMessages("productsInStock", locale));
 							
-							for(int i=0;i < Product.general.list.size();i++) {
-								System.out.println("\n" + Product.general.list.get(i).getName());
-							}
+							for(int i=0; i < Product.general.list.size(); i++) {
+								
+								
+								System.out.print("\n"+Product.general.list.get(i).getName());
+								}
+							
 							break;
 							
 						//2. See all categories	
@@ -126,6 +129,7 @@ public class Main {
 							System.out.println("\n" + messages.getMessages("categories", locale));
 							
 							for(int i=0; i< Category.general.list.size(); i++ ) {
+								
 								System.out.println("\n" + Category.general.list.get(i).getName());
 							}
 							break;
@@ -263,6 +267,8 @@ public class Main {
 							
 						case 10:
 							money.currencyExchange();
+							
+							break;
 							
 						default: 
 							System.out.println("\n" + messages.getMessages("chooseOptionCorrect", locale));

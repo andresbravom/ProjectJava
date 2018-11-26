@@ -7,7 +7,7 @@ public class ProgramDiscount {
 	Discount discount = null;
 	
 	try {
-		System.out.println("Is it the first time you buy at this store? Y/N");
+		System.out.println("Is it the first time you buy at this store? Y/N?");
 		Scanner c = new Scanner(System.in);
 		String cd = c.nextLine();
 		
