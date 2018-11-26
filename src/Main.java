@@ -46,6 +46,7 @@ public class Main {
 		Product album5 = new Product("Crazy", 01111, "Music", 40, 13.07);
 	
 		Main menu1 = new Main();
+		Currency money = new Currency();
 		
 		int opcion = 99;
 		
@@ -252,6 +253,9 @@ public class Main {
 							}
 							
 							break;
+							
+						case 10:
+							money.currencyExchange();
 							
 						default: 
 							System.out.println("\n" + messages.getMessages("chooseOptionCorrect", locale));
