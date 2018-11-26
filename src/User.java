@@ -69,7 +69,6 @@ public class User {
 		this.username = username;
 		this.password = password;
 	}
-
 	static void date() {
 		int hora,minutos,segundos;
 		LocalDate calendario;
@@ -81,11 +80,11 @@ public class User {
 			minutos = cal.get(Calendar.MINUTE);
 			segundos = cal.get(Calendar.SECOND);
 		
-			System.out.println("Products purchased at: ");
+			System.out.println("\nProducts purchased at: ");
 			System.out.println("Date: " + formato.format(cal.getTime())+ " Time: "+ hora + ":" + minutos + ":" + segundos);		
 			
-		}
 	}
+}
 	
 
 

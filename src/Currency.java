@@ -4,25 +4,26 @@ public class Currency {
 	
 	public void currencyExchange() {
 	
-		double moneda, total;
+		double currency, total;
 		String euro, dolar;
 		
-		System.out.println("Introducir la cantidad que desea cambiar: ");
+		System.out.println("Enter the amount you want to change: ");
+		System.out.println("------------------------------------");
 		Scanner n = new Scanner(System.in);
-		moneda = n.nextDouble();
+		currency = n.nextDouble();
 		
-		System.out.println("Elija una opción de cambio");
-		System.out.println("\n1. De Euros a Dolares");
-		System.out.println("2. De Dólares a Euros");
+		System.out.println("\nChoose a change option: ");
+		System.out.println("\n1. From Euros to Dollars");
+		System.out.println("2. From Dollars to Euros");
 		Scanner option = new Scanner(System.in);
 		String opcion = option.nextLine();
 
 		if(opcion.equals("1")) {
-			total = moneda * 1.13;
-			System.out.println("El total es: " + total + "$");
+			total = currency * 1.13;
+			System.out.println("The total is: " + total + "$");
 		}else {
-			total = moneda / 1.13;
-			System.out.println("El total es: " + total + "€");
+			total = currency / 1.13;
+			System.out.println("The total is: " + total + "â‚¬");
 		}	
 
 	}

@@ -52,16 +52,19 @@ public class Main {
 		int opcion = 99;
 		
 		
-		System.out.println("------------------Welcome to AndrewShop----------------------");
+		System.out.println("               Welcome to AndrewShop               ");
+		System.out.println("               ---------------------               ");
 
 		String username;
 		String pass;
 		
 		do {
-			System.out.println("\nEnter an username");
+			System.out.println("\nEnter an username: ");
+			System.out.println("-----------------");
 			Scanner name = new Scanner(System.in);
 			username = name.nextLine();
-			System.out.println("Enter a password");
+			System.out.println("Enter a password: ");
+			System.out.println("-----------------");
 			Scanner password = new Scanner(System.in);
 			pass = password.nextLine();
 		
@@ -69,10 +72,12 @@ public class Main {
 				opcion = -1;
 			
 				
-				System.out.println("Choose a laguage: ");
-				System.out.println("\n1. English");
+				System.out.println("\nChoose a laguage: ");
+				System.out.println("----------------");
+				System.out.println("1. English");
 				System.out.println("2. Spanish");
 				System.out.println("3. French");
+				System.out.println("----------------");
 				
 				Scanner language = new Scanner (System.in);
 				
@@ -266,8 +271,8 @@ public class Main {
 			
 				}
 			
-			}else if(!username.equals("exit") || !pass.equals("exit")){
-				System.out.println("exit");
+		}else if(!username.equals("exit")	|| !pass.equals("exit") ){
+				System.out.println("Write EXIT to exit the application");
 			}
 		}
 		while(!username.equals("exit") || !pass.equals("exit"));
