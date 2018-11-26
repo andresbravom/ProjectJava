@@ -2,11 +2,17 @@
 
 In this project I have developed a program focused on an online store, in which an account and a password are necessary to verify authentication.
 This project has tg¡he following tests:
+```java
 - CategoryTest
-- List_categoryTest
-- List-productTest
+- CurrencyExchangeTest
+- InternationalizationTest
+- ListCategoryTest
+- ListProductTest
+- ProductTest
+- UserIdTest
 - ProductTest
 - UserTest
+```
 
 an example of a serious test (List-productTest)
 ```java
@@ -39,8 +45,7 @@ class Messages
 class Product
 class ProductsBought
 class ProgramDiscount
-class 
-ProxyDiscount
+class ProxyDiscount
 class User
 ```
 For this project it is neccesary to create two files: the first file is used to show the information about the AndrewShop and the second one is used to comments.
