@@ -121,8 +121,10 @@ After authentication, the secondary menu will be displayed
 4. Search by category
 5. Buy
 6. Your products
-7. Contact with us
-8. Leave a coment
+7. Apply discount code
+8. Contact with us
+9. Leave a coment
+10. Currency converter
 0. Exit
 
 I have created a general list for category and for product.
