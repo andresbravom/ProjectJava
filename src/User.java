@@ -1,4 +1,7 @@
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 public class User {
@@ -58,7 +61,7 @@ public class User {
 		this.username = username;
 		this.email = email;
 		this.password = password;
-		this.id_user = id_user;	
+		this.id_user = id_user;
 		users.add(this);
 	}
 	
@@ -67,10 +70,25 @@ public class User {
 		this.password = password;
 	}
 
-
+	static void date() {
+		int hora,minutos,segundos;
+		LocalDate calendario;
+		
+		Calendar cal = Calendar.getInstance();
+		SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+		
+			hora =cal.get(Calendar.HOUR_OF_DAY);
+			minutos = cal.get(Calendar.MINUTE);
+			segundos = cal.get(Calendar.SECOND);
+		
+			System.out.println("Products purchased at: ");
+			System.out.println("Date: " + formato.format(cal.getTime())+ " Time: "+ hora + ":" + minutos + ":" + segundos);		
+			
+		}
+	}
+	
 
 
 
 	
 	
-}

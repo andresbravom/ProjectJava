@@ -1,4 +1,5 @@
 
+import java.util.Date;
 import java.util.Locale;
 import java.util.Scanner;
 import java.io.File;
@@ -11,6 +12,7 @@ import java.io.PrintWriter;
 public class Main {
 
 	static Scanner n = new Scanner(System.in);
+	private Date lastLogin;
 
 	public static void main(String[] args) {
 		
@@ -46,8 +48,8 @@ public class Main {
 		Product album5 = new Product("Crazy", 01111, "Music", 40, 13.07);
 	
 		Main menu1 = new Main();
-		
 		int opcion = 99;
+		
 		
 		System.out.println("------------------Welcome to AndrewShop----------------------");
 
@@ -180,7 +182,7 @@ public class Main {
 						//6. Your products
 						case 6:
 							
-							
+							User.actualUser.date();
 							System.out.println("\n"+messages.getMessages("username", locale) + User.actualUser.getUsername());
 							System.out.println("\n" + messages.getMessages("boughtProducts", locale));
 							ProductsBought.printProductsBuy(User.actualUser);
@@ -190,12 +192,12 @@ public class Main {
 							break;
 							
 						case 7:
-							String encuesta;
+							String question;
 							System.out.println("\n" + messages.getMessages("YouWant", locale));
 							Scanner n = new Scanner (System.in);
-							encuesta = n.nextLine();
+							question = n.nextLine();
 							
-							if(encuesta.equals("Y") || encuesta.equals("y") || encuesta.equals("S") || encuesta.equals("s") || encuesta.equals("O") || encuesta.equals("o")) {
+							if(question.equals("Y") || question.equals("y") || question.equals("S") || question.equals("s") || question.equals("O") || question.equals("o")) {
 								ProgramDiscount.discountAndrewCode(0.20);
 							}else {
 								System.out.println("\n" + messages.getMessages("youMost", locale));
