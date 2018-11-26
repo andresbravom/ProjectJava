@@ -29,7 +29,6 @@ public class Category {
 	Category(String name, int id_category){
 		this.name = name;
 		this.id_category = id_category;
-		general.addCategory(this);
-		
+		general.addCategory(this);		
 	}
 }

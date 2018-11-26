@@ -12,6 +12,7 @@ public class Menu {
 	
 	public void menu() {
 		System.out.println("\n" + messages2.getMessages("option", locale));
+		System.out.println("-----------------");
 		System.out.println("\n" + messages2.getMessages("option1", locale));
 		System.out.println("\n" + messages2.getMessages("option2", locale));
 		System.out.println("\n" + messages2.getMessages("option3", locale));

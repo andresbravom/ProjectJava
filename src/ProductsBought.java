@@ -6,6 +6,7 @@ public class ProductsBought extends User{
 		
 	}
 	static void printProductsBuy(User n) {
+		//System.out.println());
 		for(int i=0; i<n.buyList.size();i++) {
 			System.out.print("\n" + n.buyList.get(i).getName()+" "+n.buyList.get(i).getPrize()+"€");
 		}
