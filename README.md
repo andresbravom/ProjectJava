@@ -23,13 +23,24 @@ class List_productTest {
 	}
 ```
 
-It has been declared in 6 classes that are:
+In this project I have declared the following classes
 ```java 
+class AuthentificationUser
 class Category
-class List_category
-class List_product
+class Currency
+interface Discount
+class Discount
+calss DiscountCode
+class ListCategory
+class ListProduct
+class Main
 class Menu
+class Messages
 class Product
+class ProductsBought
+class ProgramDiscount
+class 
+ProxyDiscount
 class User
 ```
 For this project it is neccesary to create two files: the first file is used to show the information about the AndrewShop and the second one is used to comments.
@@ -86,7 +97,22 @@ public class Messages {
 
 }
 ```
-
+For this implementation it is necessary to create a file for each language that you want to implement.
+For example:
+```java
+option = Choose an option:
+option1 = 1. See all products
+option2 = 2. See all categories
+option3 = 3. Search a product
+option4 = 4. Search product by category
+option5 = 5. Buy
+option6 = 6. Your products
+option7 = 7. Apply discount code
+option8 = 8. Contact with us
+option9 = 9. Leave a comment
+option11 = 10. Currency converter
+option10 = 0. Exit
+```
 After authentication, the secondary menu will be displayed
 
 1. See all products
@@ -191,7 +217,7 @@ Email: andresbravo@andrewshop.com
 - Twitter: https://twitter.com/AndrewShop
 - LinkedIn: https://www.linkedin.com/in/AndrewShop/ 
 
-## in option 9.
+## In option 9.
 
 The user can leave comments and suggestions **Second file**. For example. 
 ```java
@@ -204,6 +230,9 @@ PrintWriter print = new PrintWriter(new FileWriter(fileComent));
 ``` 
 
 *This page is Amazing. Thanks for all.*
+
+## In option 10.
+This option allows the user to make a currency exchange to make the purchase more comfortable
 
 ## In option 0.
 The user can exit the program.
