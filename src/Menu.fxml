@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
    <children>
       <Label alignment="CENTER" layoutX="175.0" layoutY="37.0" prefHeight="47.0" prefWidth="230.0" text="Andrew-Shop" textFill="#e30707">
          <font>
@@ -32,7 +32,7 @@
             <MenuItem fx:id="option8" mnemonicParsing="false" onAction="#contactWithUs" text="Contact with us" />
             <MenuItem fx:id="option9" mnemonicParsing="false" onAction="#leaveAComent" text="Leave a comment" />
             <MenuItem fx:id="option10" mnemonicParsing="false" onAction="#currencyConverter" text="Currency converter" />
-            <MenuItem fx:id="option11" mnemonicParsing="false" onAction="#exit" text="Exit" />
+            <MenuItem fx:id="option11" mnemonicParsing="false" onAction="#exitMenu" text="Exit" />
         </items>
       </MenuButton>
    </children>

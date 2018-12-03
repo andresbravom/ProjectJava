@@ -12,6 +12,7 @@ public class General extends Application {
 	static Stage login;
 	static Stage languages;
 	static Stage menu;
+	static Stage mainMenu1;
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
@@ -39,8 +40,6 @@ public class General extends Application {
 			Scene sceneMenu = new Scene (rootMenu);
 			menu.setTitle("Menu");
 			menu.setScene(sceneMenu);
-			
-			
 			
 			
 		}catch(Exception e) {
