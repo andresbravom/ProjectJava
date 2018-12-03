@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="CENTER" layoutX="175.0" layoutY="37.0" prefHeight="47.0" prefWidth="230.0" text="Andrew-Shop" textFill="#e30707">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="204.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@avatar%20(1).png" />
+         </image>
+      </ImageView>
+      <Button layoutX="124.0" layoutY="276.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="75.0" text="English" />
+      <Button layoutX="231.0" layoutY="276.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="75.0" text="Spanish" />
+      <Button layoutX="338.0" layoutY="276.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="75.0" text="French" />
+   </children>
+</Pane>

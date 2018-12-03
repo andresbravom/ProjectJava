@@ -46,6 +46,12 @@ public class Main {
 		Product album3 = new Product("Sticky fingers", 01101, "Music", 60, 15.99);
 		Product album4 = new Product("Born to run", 01110, "Music", 25, 10.00);
 		Product album5 = new Product("Crazy", 01111, "Music", 40, 13.07);
+		
+		
+		General.Inicio();
+		
+		/*
+		
 	
 		Main menu1 = new Main();
 		Currency money = new Currency();
@@ -89,6 +95,7 @@ public class Main {
 				 * If condition to evaluate language if it is not equal
 				 * then the default language will be english. 
 				 */
+		/*
 				if(selectionLanguage.equals("2")) {
 					locale = new Locale("es", "ES");
 					menu = new Menu(locale);
@@ -282,8 +289,10 @@ public class Main {
 			}
 		}
 		while(!username.equals("exit") || !pass.equals("exit"));
-	
+	*/
 	}
+	
 }
+
 			
 		

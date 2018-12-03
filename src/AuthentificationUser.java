@@ -1,4 +1,5 @@
 
+
 public class AuthentificationUser extends User{
 
 	AuthentificationUser(String username, String password) {

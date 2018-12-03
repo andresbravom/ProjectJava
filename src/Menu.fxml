@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="CENTER" layoutX="175.0" layoutY="37.0" prefHeight="47.0" prefWidth="230.0" text="Andrew-Shop" textFill="#e30707">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="95.0" fitWidth="94.0" layoutX="506.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@avatar%20(1).png" />
+         </image>
+      </ImageView>
+      <MenuButton layoutX="247.0" layoutY="102.0" mnemonicParsing="false" text="Menu">
+        <items>
+          <MenuItem mnemonicParsing="false" text="See all Products" />
+          <MenuItem mnemonicParsing="false" text="See all categories" />
+            <MenuItem mnemonicParsing="false" text="Search a product" />
+            <MenuItem mnemonicParsing="false" text="Search product by category" />
+            <MenuItem mnemonicParsing="false" text="Buy" />
+            <MenuItem mnemonicParsing="false" text="Your products" />
+            <MenuItem mnemonicParsing="false" text="Apply discount code" />
+            <MenuItem mnemonicParsing="false" text="Contact with us" />
+            <MenuItem mnemonicParsing="false" text="Leave a comment" />
+            <MenuItem mnemonicParsing="false" text="Currency converter" />
+            <MenuItem mnemonicParsing="false" text="Exit" />
+        </items>
+      </MenuButton>
+   </children>
+</Pane>
