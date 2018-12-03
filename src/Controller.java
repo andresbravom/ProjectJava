@@ -100,8 +100,20 @@ public class Controller {
 
     @FXML
     void SeeAllProducts(ActionEvent event) {
+    	General.menu.close();
+    	General.option1.show();
 
     }
+    
+    @FXML
+    void seeAllCategories(ActionEvent event) {
+    	General.menu.close();
+    	General.option2.show();
+    }
+    @FXML
+    private TextField showProduct;
+
+
 
     @FXML
     void buy(ActionEvent event) {
@@ -143,15 +155,14 @@ public class Controller {
 
     }
 
-    @FXML
-    void seeAllCategories(ActionEvent event) {
-
-    }
+   
 
     @FXML
     void yourProducts(ActionEvent event) {
 
     }
+    
+    
 
 }
 
