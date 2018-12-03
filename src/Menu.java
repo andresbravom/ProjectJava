@@ -23,8 +23,8 @@ public class Menu {
 		System.out.println("\n" + messages2.getMessages("option7", locale));
 		System.out.println("\n" + messages2.getMessages("option8", locale));
 		System.out.println("\n" + messages2.getMessages("option9", locale));
-		System.out.println("\n" + messages2.getMessages("option11", locale));
 		System.out.println("\n" + messages2.getMessages("option10", locale));
+		System.out.println("\n" + messages2.getMessages("option11", locale));
 		System.out.println("\n------------------------------------");
 	}
 }

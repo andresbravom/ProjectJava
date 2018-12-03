@@ -52,8 +52,8 @@ public class Main {
 		int opcion = 99;
 		
 		
-		System.out.println("               Welcome to AndrewShop               ");
-		System.out.println("               ---------------------               ");
+		System.out.println("               Welcome to Andrew-Shop               ");
+		System.out.println("               ----------------------               ");
 
 		String username;
 		String pass;
