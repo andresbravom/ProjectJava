@@ -20,28 +20,37 @@ public class Controller {
 
     @FXML
     private Button buttonExit;
+    
+    @FXML
+    private Button buttonEnglish;
 
     @FXML
     void exit(ActionEvent event) {
     	General.login.close();
     	
     }
-
+ 
     @FXML
   
     void login(ActionEvent event) {
-    
    
-    		String textUserName = username.getText();
-    		String textPassword = password.getText();
+		String textUserName = username.getText();
+		String textPassword = password.getText();
+		
+		if (AuthentificationUser .authentification(textUserName, textPassword)) {
+			
+			General.login.close();
+			General.languages.show();
     		
-    		if (AuthentificationUser .authentification(textUserName, textPassword)) {
-    			
-    			General.login.close();
-    			General.languages.show();
-    		
-    		}
-    		
-    	
+    	}
     }
+    
+    @FXML
+    void selectEnglish(ActionEvent event) {
+    	General.languages.close();
+    	General.menu.show();
+
+    }
+
 }
+
