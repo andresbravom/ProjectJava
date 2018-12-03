@@ -16,6 +16,10 @@ public class General extends Application {
 	static Stage option1;
 	static Stage option2;
 	static Stage option3;
+	static Stage option4;
+	static Stage option5;
+	static Stage option6;
+	static Stage option7;
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
@@ -64,6 +68,33 @@ public class General extends Application {
 			Scene sceneOption3 = new Scene(rootOption3);
 			option3.setTitle("Option3");
 			option3.setScene(sceneOption3);
+			
+			option4 = new Stage();
+			URL op4 = getClass().getClassLoader().getResource("Option4.fxml");
+			Parent rootOption4 = FXMLLoader.load(op4);
+			Scene sceneOption4 = new Scene(rootOption4);
+			option4.setTitle("Option4");
+			option4.setScene(sceneOption4);
+			
+			option5 = new Stage();
+			URL op5 = getClass().getClassLoader().getResource("Option5.fxml");
+			Parent rootOption5 = FXMLLoader.load(op5);
+			Scene sceneOption5 = new Scene(rootOption5);
+			option5.setTitle("Option5");
+			option5.setScene(sceneOption5);
+			
+			option6 = new Stage();
+			URL op6 = getClass().getClassLoader().getResource("Option6.fxml");
+			Parent rootOption6 = FXMLLoader.load(op6);
+			Scene sceneOption6 = new Scene(rootOption6);
+			option6.setTitle("Option6");
+			option6.setScene(sceneOption6);
+			
+			option7 = new Stage();
+			URL opt7 = getClass().getClassLoader().getResource("Option7.fxml");
+			
+			
+					
 			
 			
 		}catch(Exception e) {
