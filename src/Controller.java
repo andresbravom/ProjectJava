@@ -110,6 +110,14 @@ public class Controller {
     	General.menu.close();
     	General.option2.show();
     }
+    
+    @FXML
+    void searchAProduct(ActionEvent event) {
+    	General.menu.close();
+    	General.option3.show();
+
+    }
+    
     @FXML
     private TextField showProduct;
 
@@ -145,10 +153,7 @@ public class Controller {
 
     }
 
-    @FXML
-    void searchAProduct(ActionEvent event) {
-
-    }
+    
 
     @FXML
     void searchProductByCategory(ActionEvent event) {
