@@ -23,7 +23,12 @@ public class Controller2 {
     @FXML
     void seeAllCategories(ActionEvent event) {
     		
-    	textAreaCategories.setText("Hola");
+    	String x = "";
+    	for(int i=0; i< Category.general.list.size(); i++ ) {
+    		x =  x + Category.general.list.get(i).getName()+ "\r\n";
+    		textAreaCategories.setText("\n" + x);
+    	}
+    	
     }
 
 }
