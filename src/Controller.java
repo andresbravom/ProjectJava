@@ -67,10 +67,7 @@ public class Controller {
     @FXML
     private MenuItem option10;
 
-    @FXML
-    private MenuItem option11;
-    
- 
+
     @FXML
   
     void login(ActionEvent event) {
@@ -93,10 +90,6 @@ public class Controller {
 
     }
     
-    @FXML
-    void ApplyDiscount(ActionEvent event) {
-
-    }
 
     @FXML
     void SeeAllProducts(ActionEvent event) {
@@ -104,6 +97,7 @@ public class Controller {
     	General.option1.show();
 
     }
+   
     
     @FXML
     void seeAllCategories(ActionEvent event) {
@@ -111,27 +105,51 @@ public class Controller {
     	General.option2.show();
     }
     
+    
     @FXML
-    void searchAProduct(ActionEvent event) {
+    void searchAProducts(ActionEvent event) {
+
+    
     	General.menu.close();
     	General.option3.show();
 
     }
     
     @FXML
+    void searchProductByCategory(ActionEvent event) {
+    	General.menu.close();
+    	General.option4.show();
+    }
+    
+    @FXML
+    void buy(ActionEvent event) {
+    	General.menu.close();
+    	General.option5.show();
+    }
+    
+    @FXML
+    void yourProducts(ActionEvent event) {
+    	General.menu.close();
+    	General.option6.show();
+
+    }
+    @FXML
+    void ApplyDiscount(ActionEvent event) {
+    	General.menu.close();
+    	General.option7.show();
+    }
+    
+    @FXML
+    void contactWithUs(ActionEvent event) {
+    	General.menu.close();
+    	General.option8.show();
+    }
+    
+    @FXML
     private TextField showProduct;
 
 
-
-    @FXML
-    void buy(ActionEvent event) {
-
-    }
-
-    @FXML
-    void contactWithUs(ActionEvent event) {
-
-    }
+    
 
     @FXML
     void currencyConverter(ActionEvent event) {
@@ -143,30 +161,13 @@ public class Controller {
 
     }
 
-    @FXML
-    void exitMenu(ActionEvent event) {
-
-    }
+   
 
     @FXML
     void leaveAComent(ActionEvent event) {
 
     }
-
-    
-
-    @FXML
-    void searchProductByCategory(ActionEvent event) {
-
-    }
-
    
-
-    @FXML
-    void yourProducts(ActionEvent event) {
-
-    }
-    
     
 
 }

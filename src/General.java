@@ -20,6 +20,11 @@ public class General extends Application {
 	static Stage option5;
 	static Stage option6;
 	static Stage option7;
+	static Stage option8;
+	static Stage option9;
+	static Stage option10;
+	
+	
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
@@ -97,9 +102,29 @@ public class General extends Application {
 			option7.setTitle("Option7");
 			option7.setScene(sceneOption7);
 			
-					
+			option8 = new Stage();
+			URL op8 = getClass().getClassLoader().getResource("Option8.fxml");
+			Parent rootOption8 = FXMLLoader.load(op8);
+			Scene sceneOption8 = new Scene(rootOption8);
+			option8.setTitle("Option8");
+			option8.setScene(sceneOption8);
+			/*
+			option9 = new Stage();
+			URL op9 = getClass().getClassLoader().getResource("Option9.fxml");
+			Parent rootOption9 = FXMLLoader.load(op9);
+			Scene sceneOption9 = new Scene(rootOption9);
+			option9.setTitle("Option9");
+			option9.setScene(sceneOption9);
 			
+			option10 = new Stage();
+			URL op10 = getClass().getClassLoader().getResource("Option10.fxml");
+			Parent rootOption10 = FXMLLoader.load(op10);
+			Scene sceneOption10 = new Scene (rootOption10);
+			option10.setTitle("Option10");
+			option10.setScene(sceneOption10);
 			
+		
+			*/
 		}catch(Exception e) {
 			e.printStackTrace();
 			}

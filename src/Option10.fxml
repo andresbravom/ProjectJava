@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" type="Pane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <Label alignment="CENTER" layoutX="140.0" layoutY="37.0" prefHeight="48.0" prefWidth="329.0" text="Andrew-Shop" textFill="#e30707">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="95.0" fitWidth="94.0" layoutX="498.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@avatar%20(1).png" />
+         </image>
+      </ImageView>
+      <Label layoutX="244.0" layoutY="85.0" text="Currency Converter" />
+      <TextField layoutX="221.0" layoutY="135.0" />
+      <Button layoutX="271.0" layoutY="162.0" mnemonicParsing="false" text="Enter" />
+      <Label layoutX="272.0" layoutY="118.0" text="Cantidad" />
+      <Button layoutX="192.0" layoutY="214.0" mnemonicParsing="false" text="Dolars" />
+      <Button layoutX="341.0" layoutY="214.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="64.0" text="Euros" />
+      <GridPane layoutX="194.0" layoutY="273.0" prefHeight="55.0" prefWidth="202.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="101.0" minWidth="10.0" prefWidth="95.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="107.0" minWidth="10.0" prefWidth="107.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" text="Total" />
+            <TextField GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+   </children>
+</fx:root>
