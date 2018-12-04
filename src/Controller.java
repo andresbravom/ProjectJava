@@ -2,6 +2,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
@@ -66,8 +67,11 @@ public class Controller {
 
     @FXML
     private MenuItem option10;
-
-
+    
+    @FXML
+    private Button s;
+    
+    
     @FXML
   
     void login(ActionEvent event) {
@@ -80,6 +84,7 @@ public class Controller {
 			General.login.close();
 			General.languages.show();
     		
+    	
     	}
     }
     
@@ -89,15 +94,19 @@ public class Controller {
     	General.menu.show();
 
     }
-    
+    @FXML
+    private TextField textAreaProducts;
 
     @FXML
     void SeeAllProducts(ActionEvent event) {
+    	
     	General.menu.close();
+    	
+    	
+    
     	General.option1.show();
-
-    }
-   
+    	
+    }	
     
     @FXML
     void seeAllCategories(ActionEvent event) {
@@ -144,17 +153,24 @@ public class Controller {
     	General.menu.close();
     	General.option8.show();
     }
-    
     @FXML
-    private TextField showProduct;
-
-
+    void leaveAComent(ActionEvent event) {
+    	General.menu.close();
+    	General.option9.show();
+    }
     
-
     @FXML
     void currencyConverter(ActionEvent event) {
+    	General.menu.close();
+    	General.option10.show();
 
     }
+    
+
+
+    
+
+    
 
     @FXML
     void displayMenu(ActionEvent event) {
@@ -163,10 +179,7 @@ public class Controller {
 
    
 
-    @FXML
-    void leaveAComent(ActionEvent event) {
-
-    }
+    
    
     
 

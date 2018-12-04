@@ -12,7 +12,6 @@ public class General extends Application {
 	static Stage login;
 	static Stage languages;
 	static Stage menu;
-	static Stage mainMenu1;
 	static Stage option1;
 	static Stage option2;
 	static Stage option3;
@@ -59,6 +58,7 @@ public class General extends Application {
 			Scene sceneOption1 = new Scene (rootOption1);
 			option1.setTitle("Option1");
 			option1.setScene(sceneOption1);
+			
 			
 			option2 = new Stage();
 			URL op2 = getClass().getClassLoader().getResource("Option2.fxml");
@@ -108,7 +108,7 @@ public class General extends Application {
 			Scene sceneOption8 = new Scene(rootOption8);
 			option8.setTitle("Option8");
 			option8.setScene(sceneOption8);
-			/*
+			
 			option9 = new Stage();
 			URL op9 = getClass().getClassLoader().getResource("Option9.fxml");
 			Parent rootOption9 = FXMLLoader.load(op9);
@@ -116,15 +116,15 @@ public class General extends Application {
 			option9.setTitle("Option9");
 			option9.setScene(sceneOption9);
 			
+			/*
 			option10 = new Stage();
-			URL op10 = getClass().getClassLoader().getResource("Option10.fxml");
+			URL op10 = getClass().getClassLoader().getResource("Option10");
 			Parent rootOption10 = FXMLLoader.load(op10);
-			Scene sceneOption10 = new Scene (rootOption10);
+			Scene scene10 = new Scene(rootOption10);
 			option10.setTitle("Option10");
-			option10.setScene(sceneOption10);
-			
-		
+			option10.setScene(scene10);
 			*/
+				
 		}catch(Exception e) {
 			e.printStackTrace();
 			}

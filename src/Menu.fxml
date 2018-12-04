@@ -3,6 +3,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
@@ -34,5 +35,6 @@
             <MenuItem fx:id="option10" mnemonicParsing="false" onAction="#currencyConverter" text="Currency converter" />
         </items>
       </MenuButton>
+      <TextField fx:id="prueba" layoutX="207.0" layoutY="154.0" visible="false" />
    </children>
 </Pane>
