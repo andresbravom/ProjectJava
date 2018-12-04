@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller3">
    <children>
       <Label alignment="CENTER" layoutX="140.0" layoutY="37.0" prefHeight="48.0" prefWidth="329.0" text="Andrew-Shop" textFill="#e30707">
          <font>
@@ -22,8 +22,9 @@
          </image>
       </ImageView>
       <Label layoutX="237.0" layoutY="77.0" prefHeight="23.0" prefWidth="127.0" text="Introducir producto" />
-      <TextField layoutX="218.0" layoutY="100.0" prefHeight="23.0" prefWidth="165.0" />
-      <TextArea layoutX="200.0" layoutY="173.0" prefHeight="200.0" prefWidth="200.0" />
-      <Button layoutX="271.0" layoutY="137.0" mnemonicParsing="false" text="Search" />
+      <TextField fx:id="searchProduct" layoutX="218.0" layoutY="100.0" onAction="#enterAProducts" prefHeight="23.0" prefWidth="165.0" />
+      <TextArea fx:id="textArea" layoutX="200.0" layoutY="173.0" prefHeight="200.0" prefWidth="200.0" />
+      <Button fx:id="searchButton" layoutX="271.0" layoutY="137.0" mnemonicParsing="false" onAction="#searchAProducts" text="Search" />
+      <Button fx:id="back" layoutX="26.0" layoutY="360.0" mnemonicParsing="false" onAction="#backToMenu" text="Back" />
    </children>
 </Pane>

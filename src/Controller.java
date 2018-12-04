@@ -82,8 +82,7 @@ public class Controller {
 		if (AuthentificationUser .authentification(textUserName, textPassword)) {
 			
 			General.login.close();
-			General.languages.show();
-    		
+			General.languages.show(); 		
     	
     	}
     }
@@ -165,23 +164,12 @@ public class Controller {
     	General.option10.show();
 
     }
-    
-
-
-    
-
-    
 
     @FXML
     void displayMenu(ActionEvent event) {
 
     }
-
    
-
-    
-   
-    
 
 }
 
