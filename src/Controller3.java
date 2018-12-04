@@ -25,14 +25,16 @@ public class Controller3 {
 
     }
 
-    @FXML
-    void enterAProducts(ActionEvent event) {
-
-    }
-
+    
     @FXML
     void searchAProducts(ActionEvent event) {
-
+    	String nameProduct = searchProduct.getText();
+    	
+    	if (Product.general.search_product(nameProduct) != null) {
+    		textArea.setText(Product.general.search_product(nameProduct).getName() + "\r\n"+ Product.general.search_product(nameProduct).getPrize());
+    	}else {
+    		textArea.setText("No");
+    	}
     }
 
 }

@@ -24,7 +24,11 @@ public class Controller1 {
     @FXML
     void SeeAllProducts(ActionEvent event) {
     	
-    	textAreaProducts.setText("Hola");
-    	
+    	String x = "";
+    	for(int i=0; i < Product.general.list.size(); i++) {
+    		x += Product.general.list.get(i).getName() + "\r\n";
+    		
+    	}
+    	textAreaProducts.setText("\r\n" + x);
     }
 }
