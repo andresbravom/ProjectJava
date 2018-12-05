@@ -26,8 +26,12 @@ public class Controller6 {
     void productsBought(ActionEvent event) {
     	 
     	for(int i=0; i<User.actualUser.buyList.size();i++) {
-    		textArea.setText(User.actualUser.buyList.get(i).getName()+ " " + 
-    		User.actualUser.buyList.get(i).getPrize() + "€");
+    		
+    		
+    		textArea.setText(User.actualUser.buyList.get(i).getName()+ "\r\n " + 
+    		"\r\nTotal: your purchase" + User.actualUser.buyList.get(i).getPrize() + "€" );
+    		
+    		User.actualUser.date();
     		
     	
     	

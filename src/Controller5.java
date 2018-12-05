@@ -33,7 +33,7 @@ public class Controller5 {
     	if (Product.general.search_product(productBuy) != null) {
     		Product.general.search_product(productBuy).buy_product(User.actualUser);
     		
-    		textArea.setText("Producto comprado");
+    		textArea.setText("!Thanks for your purchase!");
     	}else {
     		textArea.setText("Product not found");
     	}
