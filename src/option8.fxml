@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller8">
    <children>
       <Label alignment="CENTER" layoutX="228.0" layoutY="24.0" prefHeight="48.0" prefWidth="173.0" text="Andrew-Shop" textFill="#e30707">
          <font>
@@ -20,6 +20,6 @@
          </image>
       </ImageView>
       <Label alignment="CENTER" layoutX="255.0" layoutY="73.0" prefHeight="22.0" prefWidth="107.0" text="Networks" />
-      <TextArea layoutX="215.0" layoutY="121.0" prefHeight="200.0" prefWidth="200.0" />
+      <TextArea fx:id="textArea" layoutX="205.0" layoutY="136.0" prefHeight="200.0" prefWidth="220.0" />
    </children>
 </Pane>
