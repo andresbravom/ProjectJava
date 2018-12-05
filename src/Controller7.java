@@ -16,18 +16,19 @@ public class Controller7 {
 
     @FXML
     void applyDiscount(ActionEvent event) {
-    	double n = 0.20;
-    	String a ="";
+    	double discount = 0.20;
+    	String totalDiscount ="";
     	
     	for(int i=0; i<User.actualUser.buyList.size();i++) {
     	Double total = User.actualUser.buyList.get(i).getPrize();
     	
-    	n = total * n;
-    	total = total - n;
+    	discount = total * discount;
+    	total = total - discount;
     	
-    	a = String.valueOf(total);
+    	totalDiscount = String.valueOf(total);
     	
-    	textArea.setText(a);
+    	textArea.setText("\r\nTotal cost of your puchases: " + User.actualUser.buyList.get(i).getPrize() + "€" + "\r\n"
+    			+"\r\nTotal with 20% of discount: " + totalDiscount + "€");
     	}
 
     }

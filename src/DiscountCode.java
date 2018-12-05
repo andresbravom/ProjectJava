@@ -1,5 +1,8 @@
 import java.util.Scanner;
 
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+
 public class DiscountCode implements Discount{
 
 	@Override
@@ -19,3 +22,5 @@ public class DiscountCode implements Discount{
 	}	
 	
 }
+
+

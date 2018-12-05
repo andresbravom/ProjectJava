@@ -32,7 +32,7 @@ public class Controller6 {
     		
     		
     		textArea.setText(User.actualUser.buyList.get(i).getName()+ "\r\n " + 
-    		"\r\nTotal: your purchase" + User.actualUser.buyList.get(i).getPrize() + "€" );
+    		"\r\nTotal: your purchase: " + User.actualUser.buyList.get(i).getPrize() + "€" );
 
     		
     	}
