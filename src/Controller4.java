@@ -36,8 +36,9 @@ public class Controller4 {
     	String nameCategory = searchCategory.getText();
     	
     	if(Category.general.searchCategory(nameCategory) !=null) {
-    		
         		
+        	
+        	
         	
     		
     	}else {

@@ -31,7 +31,11 @@ public class Controller3 {
     	String nameProduct = searchProduct.getText();
     	
     	if (Product.general.search_product(nameProduct) != null) {
-    		textArea.setText(Product.general.search_product(nameProduct).getName() + "\r\n"+ Product.general.search_product(nameProduct).getPrize());
+    		textArea.setText("Products in stock:\r\n" + "\r\n" + 
+    		Product.general.search_product(nameProduct).getName() + "\r\n"+ 
+    		"Price: " + Product.general.search_product(nameProduct).getPrize()+"€\r\n"+ 
+    		"Stock: " + Product.general.search_product(nameProduct).getStock() + "\r\n" + 
+    		"ID Product: " + Product.general.search_product(nameProduct).getId());
     	}else {
     		textArea.setText("No");
     	}

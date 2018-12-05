@@ -24,7 +24,7 @@
       <Label alignment="CENTER" layoutX="195.0" layoutY="61.0" prefHeight="22.0" prefWidth="238.0" text="Introduzca el nombre del producto" />
       <TextField fx:id="buyProduct" layoutX="231.0" layoutY="102.0" />
       <TextArea fx:id="textArea" layoutX="214.0" layoutY="208.0" prefHeight="139.0" prefWidth="200.0" />
-      <Button fx:id="buttonBuy" layoutX="285.0" layoutY="140.0" mnemonicParsing="false" onAction="#buyProduct" text="Search" />
+      <Button fx:id="buttonBuy" layoutX="285.0" layoutY="140.0" mnemonicParsing="false" onAction="#buyProduct" text="Buy" />
       <Button fx:id="back" layoutX="27.0" layoutY="347.0" mnemonicParsing="false" onAction="#backToMenu" text="Back" />
    </children>
 </Pane>

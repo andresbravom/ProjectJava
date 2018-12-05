@@ -71,6 +71,9 @@ public class Controller {
     @FXML
     private Button s;
     
+    @FXML
+    private Button back;
+    
     
     @FXML
   
@@ -168,6 +171,12 @@ public class Controller {
     @FXML
     void displayMenu(ActionEvent event) {
 
+    }
+    
+    @FXML
+    void backToMainMenu(ActionEvent event) {
+    	General.menu.close();
+    	General.login.show();
     }
    
 
