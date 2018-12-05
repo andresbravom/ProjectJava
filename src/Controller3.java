@@ -20,6 +20,9 @@ public class Controller3 {
 
     @FXML
     void backToMenu(ActionEvent event) {
+    	
+    	searchProduct.clear();
+    	textArea.clear();
     	General.option3.close();
     	General.menu.show();
 
