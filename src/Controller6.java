@@ -7,6 +7,9 @@ public class Controller6 {
 
     @FXML
     private TextArea textArea;
+    
+    @FXML
+    private TextArea textAreaTime;
 
     @FXML
     private Button back;
@@ -30,11 +33,7 @@ public class Controller6 {
     		
     		textArea.setText(User.actualUser.buyList.get(i).getName()+ "\r\n " + 
     		"\r\nTotal: your purchase" + User.actualUser.buyList.get(i).getPrize() + "€" );
-    		
-    		User.actualUser.date();
-    		
-    	
-    	
+
     		
     	}
     }
