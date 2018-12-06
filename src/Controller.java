@@ -87,6 +87,10 @@ public class Controller {
 			General.login.close();
 			General.languages.show(); 		
     	
+    	}else {
+    		username.clear();
+    		password.clear();
+    		
     	}
     }
     

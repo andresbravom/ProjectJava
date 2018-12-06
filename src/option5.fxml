@@ -21,10 +21,19 @@
             <Image url="@avatar%20(1).png" />
          </image>
       </ImageView>
-      <Label alignment="CENTER" layoutX="195.0" layoutY="61.0" prefHeight="22.0" prefWidth="238.0" text="Introduzca el nombre del producto" />
-      <TextField fx:id="buyProduct" layoutX="231.0" layoutY="102.0" />
-      <TextArea fx:id="textArea" layoutX="214.0" layoutY="208.0" prefHeight="48.0" prefWidth="200.0" />
-      <Button fx:id="buttonBuy" layoutX="285.0" layoutY="140.0" mnemonicParsing="false" onAction="#buyProduct" text="Buy" />
+      <Label alignment="CENTER" layoutX="195.0" layoutY="61.0" prefHeight="22.0" prefWidth="238.0" text="Enter the product´s name">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <TextField fx:id="buyProduct" layoutX="211.0" layoutY="101.0">
+         <font>
+            <Font size="16.0" />
+         </font></TextField>
+      <TextArea fx:id="textArea" layoutX="182.0" layoutY="200.0" prefHeight="48.0" prefWidth="263.0">
+         <font>
+            <Font size="15.0" />
+         </font></TextArea>
+      <Button fx:id="buttonBuy" layoutX="293.0" layoutY="133.0" mnemonicParsing="false" onAction="#buyProduct" text="Buy" />
       <Button fx:id="back" layoutX="27.0" layoutY="347.0" mnemonicParsing="false" onAction="#backToMenu" text="Back" />
    </children>
 </Pane>

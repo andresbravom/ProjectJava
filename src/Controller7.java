@@ -35,7 +35,8 @@ public class Controller7 {
 
     @FXML
     void backToMenu(ActionEvent event) {
-
+    	
+    	textArea.clear();
     	General.option7.close();
     	General.menu.show();
     }

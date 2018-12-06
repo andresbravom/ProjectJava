@@ -20,9 +20,15 @@
             <Image url="@avatar%20(1).png" />
          </image>
       </ImageView>
-      <TextArea fx:id="textArea" layoutX="159.0" layoutY="174.0" prefHeight="167.0" prefWidth="282.0" />
+      <TextArea fx:id="textArea" layoutX="159.0" layoutY="174.0" prefHeight="167.0" prefWidth="282.0">
+         <font>
+            <Font size="16.0" />
+         </font></TextArea>
       <Button fx:id="back" layoutX="21.0" layoutY="341.0" mnemonicParsing="false" onAction="#backToMenu" text="Back" />
-      <Label layoutX="157.0" layoutY="100.0" prefHeight="35.0" prefWidth="341.0" text="By pressing &quot;Discount&quot; you accept the conditions" />
+      <Label layoutX="132.0" layoutY="72.0" prefHeight="57.0" prefWidth="368.0" text="By pressing &quot;Discount&quot; you accept the conditions">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
       <Button fx:id="buttonDiscount" layoutX="264.0" layoutY="144.0" mnemonicParsing="false" onAction="#applyDiscount" text="Discount" />
    </children>
 </Pane>

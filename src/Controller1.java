@@ -17,9 +17,8 @@ public class Controller1 {
     @FXML
     void BackToMenu(ActionEvent event) {
     	
-    	
+    	textAreaProducts.clear();
     	General.option1.close();
-    	
     	General.menu.show();
     }
 

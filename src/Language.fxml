@@ -19,8 +19,6 @@
             <Image url="@avatar%20(1).png" />
          </image>
       </ImageView>
-      <Button fx:id="buttonEnglish" layoutX="124.0" layoutY="276.0" mnemonicParsing="false" onAction="#selectEnglish" prefHeight="27.0" prefWidth="75.0" text="English" />
-      <Button layoutX="231.0" layoutY="276.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="75.0" text="Spanish" />
-      <Button layoutX="338.0" layoutY="276.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="75.0" text="French" />
+      <Button fx:id="buttonEnglish" layoutX="253.0" layoutY="274.0" mnemonicParsing="false" onAction="#selectEnglish" prefHeight="27.0" prefWidth="75.0" text="English" />
    </children>
 </Pane>

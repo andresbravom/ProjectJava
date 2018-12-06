@@ -20,7 +20,10 @@
             <Image url="@avatar%20(1).png" />
          </image>
       </ImageView>
-      <TextArea fx:id="textArea" layoutX="215.0" layoutY="151.0" prefHeight="131.0" prefWidth="200.0" />
+      <TextArea fx:id="textArea" layoutX="215.0" layoutY="151.0" prefHeight="131.0" prefWidth="200.0">
+         <font>
+            <Font size="16.0" />
+         </font></TextArea>
       <Button fx:id="back" layoutX="27.0" layoutY="339.0" mnemonicParsing="false" onAction="#backToMenu" text="Back" />
       <Button fx:id="buttonRefresh" layoutX="267.0" layoutY="89.0" mnemonicParsing="false" onAction="#productsBought" text="My Products" />
    </children>

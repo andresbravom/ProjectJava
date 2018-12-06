@@ -25,6 +25,8 @@ public class Controller4 {
     @FXML
     void backToMenu(ActionEvent event) {
     	
+    	searchProductByCategory.clear();
+    	textArea.clear();
     	General.option4.close();
     	General.menu.show();
 
@@ -50,24 +52,4 @@ public class Controller4 {
 }
 
 
-/*
- *   @FXML
-    void BackToMenu(ActionEvent event) {
-    	General.option2.close();
-    	General.menu.show();
-    }
-
-    @FXML
-    void seeAllCategories(ActionEvent event) {
-    		
-    	String x = "";
-    	for(int i=0; i< Category.general.list.size(); i++ ) {
-    		x =  x + Category.general.list.get(i).getName()+ "\r\n";
-    		textAreaCategories.setText("\n" + x);
-    	}
-    	
-    }
-
-}
- */
 

@@ -21,9 +21,18 @@
             <Image url="@avatar%20(1).png" />
          </image>
       </ImageView>
-      <Label fx:id="searchCategory" layoutX="232.0" layoutY="61.0" prefHeight="23.0" prefWidth="166.0" text="Introduzca una categoría" />
-      <TextField fx:id="searchProductByCategory" layoutX="228.0" layoutY="89.0" />
-      <TextArea fx:id="textArea" layoutX="211.0" layoutY="171.0" prefHeight="200.0" prefWidth="200.0" />
+      <Label fx:id="searchCategory" layoutX="228.0" layoutY="61.0" prefHeight="23.0" prefWidth="173.0" text="Enter a Category">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <TextField fx:id="searchProductByCategory" layoutX="208.0" layoutY="89.0">
+         <font>
+            <Font size="16.0" />
+         </font></TextField>
+      <TextArea fx:id="textArea" layoutX="211.0" layoutY="171.0" prefHeight="200.0" prefWidth="200.0">
+         <font>
+            <Font size="16.0" />
+         </font></TextArea>
       <Button fx:id="buttonSearch" layoutX="282.0" layoutY="127.0" mnemonicParsing="false" onAction="#searchProduct" text="Search" />
       <Button fx:id="back" layoutX="14.0" layoutY="358.0" mnemonicParsing="false" onAction="#backToMenu" text="Back" />
    </children>

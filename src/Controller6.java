@@ -8,8 +8,7 @@ public class Controller6 {
     @FXML
     private TextArea textArea;
     
-    @FXML
-    private TextArea textAreaTime;
+ 
 
     @FXML
     private Button back;
@@ -20,6 +19,7 @@ public class Controller6 {
     @FXML
     void backToMenu(ActionEvent event) {
     	
+    	textArea.clear();
     	General.option6.close();
     	General.menu.show();
 
