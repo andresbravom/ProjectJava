@@ -17,6 +17,7 @@ public class ListCategory {
 		
 		int i = 0;
 		boolean found = false;
+		
 		while(i < list.size()) {
 			
 			if (nameCategory.equals( list.get(i).getName()))  {

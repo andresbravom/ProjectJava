@@ -179,8 +179,10 @@ public class Controller {
     
     @FXML
     void backToMainMenu(ActionEvent event) {
+    	
     	General.menu.close();
     	General.login.show();
+    	
     }
    
 

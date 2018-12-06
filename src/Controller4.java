@@ -24,32 +24,29 @@ public class Controller4 {
 
     @FXML
     void backToMenu(ActionEvent event) {
-    	
+
     	searchProductByCategory.clear();
     	textArea.clear();
     	General.option4.close();
     	General.menu.show();
-
     }
 
     @FXML
-    void searchProduct(ActionEvent event) {
-    	
-    	String nameCategory = searchCategory.getText();
+    void searchCategory(ActionEvent event) {
+
+    	String nameCategory = searchProductByCategory.getText();
     	
     	if(Category.general.searchCategory(nameCategory) !=null) {
-        		
-        	
-        	
-        	
-    		
+    		textArea.setText("Categories in stock:\r\n" +
+    		Category.general.searchCategory(nameCategory).getName()+"\r\n" +
+    		"ID Catgory: " + Category.general.searchCategory(nameCategory).getId_category());
+     	
     	}else {
-    		textArea.setText("NO");
+    		textArea.setText("Category not found");
     	}
 
     }
+    
 
 }
-
-
 

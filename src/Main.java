@@ -23,6 +23,7 @@ public class Main {
 		User user3 = new User("José Luis", "joséluis@andrewshop.com", "qwerty", 0003);
 		User user4 = new User("Alonso", "alonso@andrewshop.com", "qwerty", 0004);
 		User user5 = new User("Max", "max@andrewshop.com", "qwerty", 0005);
+		User user6 = new User("Chio", "chio@andrewshop.com", "qwerty", 0006);
 		
 		Category video = new Category("Video", 001);	
 		Category books = new Category("Books", 002);

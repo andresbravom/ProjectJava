@@ -67,13 +67,12 @@ import java.util.Scanner;
 	}
 	static void printProducts(Category n) {
 		
-		
-		
 		System.out.println("\nProducts in stock");
 		
 		for(int i=0; i < n.products.list.size(); i++){
 			
-			System.out.println("\n" + n.products.list.get(i).getName() + " " + n.products.list.get(i).getPrize() + "€");
+			System.out.println("\n" + n.products.list.get(i).getName() 
+					+ " " + n.products.list.get(i).getPrize() + "€");
 				
 		}			
 	}

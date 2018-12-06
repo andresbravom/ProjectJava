@@ -40,8 +40,11 @@ public class Controller3 {
     		"Stock: " + Product.general.search_product(nameProduct).getStock() + "\r\n" + 
     		"ID Product: " + Product.general.search_product(nameProduct).getId());
     	}else {
-    		textArea.setText("No");
+    		textArea.setText("Product not found");
     	}
     }
 
 }
+
+
+

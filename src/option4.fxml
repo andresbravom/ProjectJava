@@ -33,7 +33,7 @@
          <font>
             <Font size="16.0" />
          </font></TextArea>
-      <Button fx:id="buttonSearch" layoutX="282.0" layoutY="127.0" mnemonicParsing="false" onAction="#searchProduct" text="Search" />
+      <Button fx:id="buttonSearch" layoutX="282.0" layoutY="127.0" mnemonicParsing="false" onAction="#searchCategory" text="Search" />
       <Button fx:id="back" layoutX="14.0" layoutY="358.0" mnemonicParsing="false" onAction="#backToMenu" text="Back" />
    </children>
 </Pane>

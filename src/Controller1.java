@@ -28,11 +28,14 @@ public class Controller1 {
     	String x = "";
     	
     	for(int i=0; i < Product.general.list.size(); i++) {
-    		x += Product.general.list.get(i).getName() + " " + Product.general.list.get(i).getPrize() + "€" + "\r\n";
+    		x += Product.general.list.get(i).getName() + " " + 
+    		Product.general.list.get(i).getPrize() + "€" + "\r\n";
+
+    		textAreaProducts.setText("Products in stock: \r\n"+ "\r\n" + x);
     		
     	}
     	
-    	textAreaProducts.setText("Products in stock: \r\n"+ "\r\n" + x);
+    	
     }
 
 }
