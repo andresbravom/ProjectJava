@@ -24,7 +24,7 @@
       <Label layoutX="238.0" layoutY="79.0" text="Introduzca Cantidad" />
       <TextField fx:id="moneyIn" layoutX="224.0" layoutY="110.0" />
       <Label layoutX="237.0" layoutY="154.0" text="A que desea cambiarlo" />
-      <Button fx:id="dollar" layoutX="179.0" layoutY="200.0" mnemonicParsing="false" onAction="#changeToDollar" text="\$" />
+      <Button fx:id="dollar" layoutX="238.0" layoutY="200.0" mnemonicParsing="false" onAction="#changeToDollar" text="\$" />
       <Button fx:id="euro" layoutX="347.0" layoutY="200.0" mnemonicParsing="false" onAction="#changeToEuro" text="€" />
       <Label layoutX="145.0" layoutY="269.0" text="Total" />
       <TextField fx:id="total" editable="false" layoutX="264.0" layoutY="264.0" />

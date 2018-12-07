@@ -75,6 +75,7 @@ public class Controller {
     @FXML
     private Button back;
     
+   
     
     @FXML
   
@@ -155,11 +156,7 @@ public class Controller {
     	General.option7.show();
     }
     
-    @FXML
-    void contactWithUs(ActionEvent event) {
-    	General.menu.close();
-    	General.option8.show();
-    }
+  
 
     @FXML
     void showNetworks(ActionEvent event) {
@@ -172,6 +169,8 @@ public class Controller {
     	General.menu.close();
     	General.option10.show();
     }
+    
+   
 
     @FXML
     void displayMenu(ActionEvent event) {

@@ -102,12 +102,6 @@ public class General extends Application {
 			option7.setTitle("Option7");
 			option7.setScene(sceneOption7);
 			
-			option8 = new Stage();
-			URL op8 = getClass().getClassLoader().getResource("Option8.fxml");
-			Parent rootOption8 = FXMLLoader.load(op8);
-			Scene sceneOption8 = new Scene(rootOption8);
-			option8.setTitle("Option8");
-			option8.setScene(sceneOption8);
 			
 			option9 = new Stage();
 			URL op9 = getClass().getClassLoader().getResource("OptionNetworks.fxml");

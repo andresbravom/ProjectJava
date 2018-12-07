@@ -1,3 +1,5 @@
+import java.math.BigDecimal;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -22,15 +24,26 @@ public class Controller10 {
 
     @FXML
     void BackToMenu(ActionEvent event) {
-
+    	
     	General.option10.close();
     	General.menu.show();
+
     }
 
     @FXML
     void changeToDollar(ActionEvent event) {
     	
+    	BigDecimal money = new BigDecimal(moneyIn.getText());
+    	BigDecimal currency = new BigDecimal(1.3);
+    	String total1 = "";
+    
     	
+    	currency = money.multiply(currency);
+    	
+    	total1 = String.valueOf(currency);
+    	
+    	total.setText(total1);
+	
 
     }
 
