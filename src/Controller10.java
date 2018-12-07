@@ -35,14 +35,14 @@ public class Controller10 {
     	
     	BigDecimal money = new BigDecimal(moneyIn.getText());
     	BigDecimal currency = new BigDecimal(1.3);
-    	String total1 = "";
+    	String totalDollar = "";
     
     	
     	currency = money.multiply(currency);
     	
-    	total1 = String.valueOf(currency);
+    	totalDollar = String.valueOf(currency);
     	
-    	total.setText(total1);
+    	total.setText(totalDollar+ "$");
 	
 
     }
@@ -50,6 +50,17 @@ public class Controller10 {
     @FXML
     void changeToEuro(ActionEvent event) {
 
+    	BigDecimal money = new BigDecimal(moneyIn.getText());
+    	BigDecimal currency = new BigDecimal(1.3);
+    	String totalEuro = "";
+    
+    	
+    	currency = money.divide(currency);
+    	
+    	totalEuro = String.valueOf(currency);
+    	
+    	total.setText(totalEuro + "€");
+    	
     }
 
 }
