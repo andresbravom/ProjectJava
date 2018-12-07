@@ -29,7 +29,7 @@
          <font>
             <Font size="16.0" />
          </font></TextField>
-      <TextArea fx:id="textArea" layoutX="211.0" layoutY="171.0" prefHeight="200.0" prefWidth="200.0">
+      <TextArea fx:id="textArea" editable="false" layoutX="211.0" layoutY="171.0" prefHeight="200.0" prefWidth="200.0">
          <font>
             <Font size="16.0" />
          </font></TextArea>

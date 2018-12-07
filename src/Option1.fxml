@@ -28,7 +28,7 @@
       </Label>
       <Button fx:id="refreshProducts" layoutX="249.0" layoutY="103.0" mnemonicParsing="false" onAction="#SeeAllProducts" text="Show Products" />
       <Button fx:id="Back" layoutX="34.0" layoutY="359.0" mnemonicParsing="false" onAction="#BackToMenu" text="Back" />
-      <TextArea fx:id="textAreaProducts" layoutX="200.0" layoutY="142.0" prefHeight="200.0" prefWidth="200.0">
+      <TextArea fx:id="textAreaProducts" editable="false" layoutX="184.0" layoutY="142.0" prefHeight="200.0" prefWidth="242.0">
          <font>
             <Font size="16.0" />
          </font>

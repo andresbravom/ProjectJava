@@ -27,13 +27,12 @@
           <MenuItem fx:id="option1" mnemonicParsing="false" onAction="#SeeAllProducts" text="See all Products" />
           <MenuItem fx:id="option2" mnemonicParsing="false" onAction="#seeAllCategories" text="See all categories" />
             <MenuItem fx:id="option3" mnemonicParsing="false" onAction="#searchAProducts" text="Search a product" />
-            <MenuItem fx:id="option4" mnemonicParsing="false" onAction="#searchProductByCategory" text="Search product by category" />
+            <MenuItem fx:id="option4" mnemonicParsing="false" onAction="#searchProductByCategory" text="Search category" />
             <MenuItem fx:id="option5" mnemonicParsing="false" onAction="#buy" text="Buy" />
             <MenuItem fx:id="option6" mnemonicParsing="false" onAction="#yourProducts" text="Your products" />
             <MenuItem fx:id="option7" mnemonicParsing="false" onAction="#ApplyDiscount" text="Apply discount code" />
-            <MenuItem fx:id="option8" mnemonicParsing="false" onAction="#contactWithUs" text="Contact with us" />
-            <MenuItem fx:id="option9" mnemonicParsing="false" onAction="#leaveAComent" text="Leave a comment" />
-            <MenuItem fx:id="option10" mnemonicParsing="false" onAction="#currencyConverter" text="Currency converter" />
+            <MenuItem fx:id="optionNetworks" mnemonicParsing="false" onAction="#showNetworks" text="Networks" />
+            <MenuItem fx:id="currency" mnemonicParsing="false" onAction="#currencyCalculate" text="Currency" />
         </items>
       </MenuButton>
       <TextField fx:id="prueba" layoutX="207.0" layoutY="154.0" visible="false" />

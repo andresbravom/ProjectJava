@@ -63,10 +63,11 @@ public class Controller {
     private MenuItem option8;
 
     @FXML
-    private MenuItem option9;
+    private MenuItem optionNetworks;
 
     @FXML
-    private MenuItem option10;
+    private MenuItem currency;
+  
     
     @FXML
     private Button s;
@@ -159,17 +160,17 @@ public class Controller {
     	General.menu.close();
     	General.option8.show();
     }
+
     @FXML
-    void leaveAComent(ActionEvent event) {
+    void showNetworks(ActionEvent event) {
     	General.menu.close();
     	General.option9.show();
     }
     
     @FXML
-    void currencyConverter(ActionEvent event) {
+    void currencyCalculate(ActionEvent event) {
     	General.menu.close();
     	General.option10.show();
-
     }
 
     @FXML

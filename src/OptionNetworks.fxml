@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller9">
+   <children>
+      <Label alignment="CENTER" layoutX="225.0" layoutY="25.0" prefHeight="48.0" prefWidth="173.0" text="Andrew-Shop" textFill="#e30707">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="95.0" fitWidth="94.0" layoutX="506.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@avatar%20(1).png" />
+         </image>
+      </ImageView>
+      <Button fx:id="back" layoutX="29.0" layoutY="339.0" mnemonicParsing="false" onAction="#backToMenu" text="Back" />
+      <Button fx:id="contactButton" layoutX="255.0" layoutY="82.0" mnemonicParsing="false" onAction="#showContact" text="Show Networks" />
+      <ImageView fitHeight="111.0" fitWidth="111.0" layoutX="37.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Facebook.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="111.0" fitWidth="111.0" layoutX="249.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@twiter.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="111.0" fitWidth="111.0" layoutX="451.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@linkedin.jpg" />
+         </image>
+      </ImageView>
+      <TextArea fx:id="textAreaF" editable="false" layoutX="14.0" layoutY="257.0" prefHeight="41.0" prefWidth="181.0">
+         <cursor>
+            <Cursor fx:constant="V_RESIZE" />
+         </cursor>
+      </TextArea>
+      <TextArea fx:id="textAreaT" layoutX="218.0" layoutY="256.0" prefHeight="43.0" prefWidth="173.0" />
+      <TextArea fx:id="textAreaL" layoutX="412.0" layoutY="257.0" prefHeight="43.0" prefWidth="181.0" />
+   </children>
+</Pane>
