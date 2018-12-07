@@ -1,4 +1,5 @@
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -20,11 +21,17 @@ public class Controller10 {
     private Button euro;
 
     @FXML
-    private TextField total;
+    private TextField totalD;
+    
+    @FXML
+    private TextField totalE;
 
     @FXML
     void BackToMenu(ActionEvent event) {
     	
+    	moneyIn.clear();
+    	totalD.clear();
+    	totalE.clear();
     	General.option10.close();
     	General.menu.show();
 
@@ -33,33 +40,36 @@ public class Controller10 {
     @FXML
     void changeToDollar(ActionEvent event) {
     	
-    	BigDecimal money = new BigDecimal(moneyIn.getText());
-    	BigDecimal currency = new BigDecimal(1.3);
+    	BigDecimal moneyDollar = new BigDecimal(moneyIn.getText());
+    	BigDecimal currencyDollar = new BigDecimal(1.13);
+    	currencyDollar = currencyDollar.setScale(2, RoundingMode.HALF_UP);
     	String totalDollar = "";
-    
+    	String totalEuro = "";
     	
-    	currency = money.multiply(currency);
+    	currencyDollar = moneyDollar.multiply(currencyDollar);
+    	totalDollar = String.valueOf(currencyDollar);
+    	totalEuro = String.valueOf(moneyDollar);
     	
-    	totalDollar = String.valueOf(currency);
-    	
-    	total.setText(totalDollar+ "$");
-	
+    	totalD.setText(totalDollar+ "$");
+    	totalE.setText(totalEuro);
 
     }
 
     @FXML
     void changeToEuro(ActionEvent event) {
 
-    	BigDecimal money = new BigDecimal(moneyIn.getText());
-    	BigDecimal currency = new BigDecimal(1.3);
+    	BigDecimal moneyEuro = new BigDecimal(moneyIn.getText());
+    	BigDecimal currencyEuro = new BigDecimal(1.13);
+    	currencyEuro = currencyEuro.setScale(2, RoundingMode.HALF_UP);
     	String totalEuro = "";
+    	String totalDollar = "";
     
+    	currencyEuro = moneyEuro.divide(currencyEuro);
+    	totalEuro = String.valueOf(currencyEuro);
+    	totalDollar = String.valueOf(moneyEuro);
     	
-    	currency = money.divide(currency);
-    	
-    	totalEuro = String.valueOf(currency);
-    	
-    	total.setText(totalEuro + "€");
+    	totalE.setText(totalEuro + "€");
+    	totalD.setText(totalDollar);
     	
     }
 

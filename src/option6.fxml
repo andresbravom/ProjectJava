@@ -20,7 +20,7 @@
             <Image url="@avatar%20(1).png" />
          </image>
       </ImageView>
-      <TextArea fx:id="textArea" editable="false" layoutX="215.0" layoutY="151.0" prefHeight="131.0" prefWidth="200.0">
+      <TextArea fx:id="textArea" editable="false" layoutX="174.0" layoutY="151.0" prefHeight="131.0" prefWidth="272.0">
          <font>
             <Font size="16.0" />
          </font></TextArea>

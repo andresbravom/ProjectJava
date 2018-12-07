@@ -20,13 +20,35 @@
             <Image url="@avatar%20(1).png" />
          </image>
       </ImageView>
-      <Button fx:id="Back" layoutX="44.0" layoutY="369.0" mnemonicParsing="false" onAction="#BackToMenu" text="Back" />
-      <Label layoutX="238.0" layoutY="79.0" text="Introduzca Cantidad" />
-      <TextField fx:id="moneyIn" layoutX="224.0" layoutY="110.0" />
-      <Label layoutX="237.0" layoutY="154.0" text="A que desea cambiarlo" />
-      <Button fx:id="dollar" layoutX="238.0" layoutY="200.0" mnemonicParsing="false" onAction="#changeToDollar" text="\$" />
-      <Button fx:id="euro" layoutX="347.0" layoutY="200.0" mnemonicParsing="false" onAction="#changeToEuro" text="€" />
-      <Label layoutX="145.0" layoutY="269.0" text="Total" />
-      <TextField fx:id="total" editable="false" layoutX="264.0" layoutY="264.0" />
+      <Button fx:id="Back" layoutX="35.0" layoutY="337.0" mnemonicParsing="false" onAction="#BackToMenu" text="Back" />
+      <Label layoutX="183.0" layoutY="79.0" text="Enter the amount you want to change:" />
+      <TextField fx:id="moneyIn" layoutX="216.0" layoutY="111.0" />
+      <Label layoutX="217.0" layoutY="166.0" text="Choose a change option:" />
+      <Button fx:id="dollar" layoutX="234.0" layoutY="183.0" mnemonicParsing="false" onAction="#changeToDollar" prefHeight="48.0" prefWidth="59.0" text="\$">
+         <font>
+            <Font size="30.0" />
+         </font></Button>
+      <Button fx:id="euro" layoutX="300.0" layoutY="183.0" mnemonicParsing="false" onAction="#changeToEuro" text="€">
+         <font>
+            <Font size="30.0" />
+         </font></Button>
+      <Label layoutX="155.0" layoutY="269.0" prefHeight="26.0" prefWidth="94.0" text="Total $">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <TextField fx:id="totalD" editable="false" layoutX="274.0" layoutY="268.0" prefHeight="27.0" prefWidth="112.0">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <Label layoutX="155.0" layoutY="299.0" prefHeight="26.0" prefWidth="73.0" text="Total €">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="totalE" editable="false" layoutX="274.0" layoutY="298.0" prefHeight="27.0" prefWidth="112.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
    </children>
 </Pane>

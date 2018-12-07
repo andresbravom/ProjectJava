@@ -42,8 +42,17 @@
          <cursor>
             <Cursor fx:constant="V_RESIZE" />
          </cursor>
+         <font>
+            <Font size="12.0" />
+         </font>
       </TextArea>
-      <TextArea fx:id="textAreaT" layoutX="218.0" layoutY="256.0" prefHeight="43.0" prefWidth="173.0" />
-      <TextArea fx:id="textAreaL" layoutX="412.0" layoutY="257.0" prefHeight="43.0" prefWidth="181.0" />
+      <TextArea fx:id="textAreaT" editable="false" layoutX="218.0" layoutY="256.0" prefHeight="43.0" prefWidth="173.0">
+         <font>
+            <Font size="12.0" />
+         </font></TextArea>
+      <TextArea fx:id="textAreaL" editable="false" layoutX="412.0" layoutY="257.0" prefHeight="43.0" prefWidth="181.0">
+         <font>
+            <Font size="12.0" />
+         </font></TextArea>
    </children>
 </Pane>

@@ -22,6 +22,10 @@ public class Controller9 {
 
     @FXML
     void backToMenu(ActionEvent event) {
+    	
+    	textAreaF.clear();
+    	textAreaT.clear();
+    	textAreaL.clear();
     	General.option9.close();
     	General.menu.show();
 

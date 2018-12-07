@@ -37,8 +37,8 @@ public class Controller4 {
     	String nameCategory = searchProductByCategory.getText();
     	
     	if(Category.general.searchCategory(nameCategory) !=null) {
-    		textArea.setText("Categories in stock:\r\n" +
-    		Category.general.searchCategory(nameCategory).getName()+"\r\n" +
+    		textArea.setText("Category in stock:\r\n" +
+    		"\r\n" + Category.general.searchCategory(nameCategory).getName()+"\r\n" +
     		"ID Catgory: " + Category.general.searchCategory(nameCategory).getId_category());
      	
     	}else {
