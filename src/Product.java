@@ -12,7 +12,7 @@ import java.util.Scanner;
 	static Messages messages = null;
 	static Locale locale = null;
 	
-	protected String getName() {
+	public String getName() {
 		return name;
 	}
 	
