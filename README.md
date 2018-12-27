@@ -1,7 +1,7 @@
 # ProyectJava
 
 In this project I have developed a program focused on an online store, in which an account and a password are necessary to verify authentication.
-This project has tg¡he following tests:
+In this project I have performed the following tests:
 
 ```java
 - AthentificationUserTest
@@ -40,7 +40,7 @@ class List_productTest {
 
 In this program I used the tool EclEmma Java Code Coverage, to evaluate the percentage of test of this application.
 Below we can see in the following images before and after using this tool.
-
+As can be seen in the ImageTest1 the percentage of test is 28.5%, however in the second image ImageTest2 the percentage of tests performed is 55.9%
 
 
 In this project I have declared the following classes
