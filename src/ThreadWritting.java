@@ -8,7 +8,9 @@ public class ThreadWritting extends ReadingClass implements Runnable{
 	}
 	
 	public void run() {
-		System.out.println("Enter a product");
+		System.out.println("Stopping any purchase of this product ");
+		System.out.println("Waitting for show name product bought:");
+		
 		product.setName(this.readLine());
 		thread.interrupt();
 	}
