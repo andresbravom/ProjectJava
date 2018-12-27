@@ -1,6 +1,8 @@
 # ProyectJava
 
 In this project I have developed a program focused on an online store, in which an account and a password are necessary to verify authentication.
+This project has been developed with JavaFX, using scenes for each déloegue of the store that we have named as "Andrew-Shop".
+Then we can see how this project is structured, in addition to the tests we have done for its optimal operation.
 In this project I have performed the following tests:
 
 ```java
@@ -42,7 +44,6 @@ In this program I used the tool EclEmma Java Code Coverage, to evaluate the perc
 Below we can see in the following images before and after using this tool.
 As can be seen in the ImageTest1 the percentage of test is 28.5%, however in the second image ImageTest2 the percentage of tests performed is 55.9%
 
-
 In this project I have declared the following classes
 ```java 
 class AuthentificationUser
@@ -62,7 +63,6 @@ class ProgramDiscount
 class ProxyDiscount
 class User
 ```
-
 
 For this project it is neccesary to create two files: the first file is used to show the information about the AndrewShop and the second one is used to comments.
 
@@ -170,6 +170,83 @@ In the case that the category does not exist, it sends a message like ("Category
 
 ## In option 5. 
 You can buy a product after searching for the product with the name and it is added to the user's purchase history. I developed this function in the product class, this function decreases the stock of products in the store.
+
+In this option we have implemented Multithreading, which allows the user to make the purchase with the guarantees that while it is performing the operation, nobody will be able to make the purchase before the initial user.
+This prevents the stock of products from being controlled and also providing an optimal service
+
+To carry out this execution we have implemented the code that is shown below
+
+```java
+public class ThreadReading extends Thread{
+	
+	private Product product;
+	
+	public ThreadReading(Product product) {
+		this.product = product;
+	}
+	
+	public void run() {
+		try {
+			sleep(5000);
+		}catch(InterruptedException e) {
+			System.out.println("Product bought");
+		}
+		
+		String p = product.getName();
+		System.out.println(p);
+	}
+
+}
+```
+
+```java
+public class ThreadWritting extends ReadingClass implements Runnable{
+	private Product product;
+	private ThreadReading thread;
+	
+	public ThreadWritting(Product product, ThreadReading thread) {
+		this.product = product;
+		this.thread = thread;
+	}
+	
+	public void run() {
+		System.out.println("Stopping any purchase of this product ");
+		System.out.println("Waitting for show name product bought:");
+		
+		product.setName(this.readLine());
+		thread.interrupt();
+	}
+
+}
+```
+
+```java
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.LineNumberReader;
+
+public class ReadingClass {
+	
+	public String readLine() {
+		String product;
+		
+		LineNumberReader lnr = new LineNumberReader(new InputStreamReader(System.in));
+		
+		try {
+			product = lnr.readLine();
+			
+		}catch(IOException e) {
+			e.printStackTrace();
+			product = "";
+			
+		}
+		return product;
+		
+	}
+
+}
+```
+
 
 ## In option 6. 
 The user can check the products that he has purchased, it works as a purchase history.
