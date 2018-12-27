@@ -42,7 +42,11 @@ class List_productTest {
 
 In this program I used the tool EclEmma Java Code Coverage, to evaluate the percentage of test of this application.
 Below we can see in the following images before and after using this tool.
-As can be seen in the [ImageTest1](https://github.com/andresbravom/ProyectJava/blob/master/ImageTest1.png) the percentage of test is 28.5%, however in the second image [ImageTest2](https://github.com/andresbravom/ProyectJava/blob/master/ImageTest2.png) the percentage of tests performed is 55.9%
+As can be seen in the the percentage of test is 28.5%.
+![ImageTest1](https://github.com/andresbravom/ProyectJava/blob/master/ImageTest1.png)
+
+However in the second image the percentage of tests performed is 55.9%
+![ImageTest2](https://github.com/andresbravom/ProyectJava/blob/master/ImageTest2.png)
 
 In this project I have declared the following classes
 ```java 
