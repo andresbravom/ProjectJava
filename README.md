@@ -2,6 +2,7 @@
 
 In this project I have developed a program focused on an online store, in which an account and a password are necessary to verify authentication.
 This project has tg¡he following tests:
+
 ```java
 - AthentificationUserTest
 - CategoryNameTest
@@ -37,6 +38,11 @@ class List_productTest {
 	}
 ```
 
+In this program I used the tool EclEmma Java Code Coverage, to evaluate the percentage of test of this application.
+Below we can see in the following images before and after using this tool.
+
+
+
 In this project I have declared the following classes
 ```java 
 class AuthentificationUser
@@ -57,7 +63,7 @@ class ProxyDiscount
 class User
 ```
 
-En este proyecto he implementado 
+
 For this project it is neccesary to create two files: the first file is used to show the information about the AndrewShop and the second one is used to comments.
 
 In the main menu it is necessary to access the store with an username and a password.
