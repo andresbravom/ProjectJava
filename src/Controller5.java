@@ -27,12 +27,22 @@ public class Controller5 {
     	General.menu.show();
 
     }
+    
+    
 
     @FXML
     void buyProduct(ActionEvent event) {
     	String productBuy = buyProduct.getText();
     	
     	if (Product.general.search_product(productBuy) != null) {
+    		
+    		ThreadReading read = new ThreadReading (Product.general.search_product(productBuy));
+    		ThreadWritting write = new ThreadWritting(Product.general.search_product(productBuy), read);
+    		
+    		Thread threadWrite = new Thread(write);
+    		threadWrite.start();
+    		read.start();
+    		
     		Product.general.search_product(productBuy).buy_product(User.actualUser);
     		
     		textArea.setText("!Thanks for your purchase!");
